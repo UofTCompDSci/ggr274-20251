@@ -1,0 +1,35 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: jupyter-book/index
+parts:
+  - caption: Quick Links
+    chapters:
+    - file: syllabus/ggr274_syllabus.ipynb
+      title: Course Syllabus
+    - url: https://q.utoronto.ca/courses/338580/announcements
+      title: Announcements
+    - url: /
+      title: Piazza
+    
+  - caption: Resources
+    chapters:
+    - file: guides/jupyterhub_guide.ipynb
+      title: JupyterHub Guide
+    - file: guides/markus_guide.ipynb
+      title: MarkUs Guide
+
+  - caption: Week 1
+    chapters:
+    - url: https://q.utoronto.ca/courses/338580/files?preview=29750629
+      title: Prof. Li's Slides
+    - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+    - file: weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb
+      title: Prof. Musabirov's Notebook
+    - file: weekly-materials/week01/lab/Lab_1.ipynb
+      title: Lab 01 Notebook
+    - file: weekly-materials/week01/homework/Homework_1.ipynb
+      title: Homework 01 Notebook
+
