@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GGR274 Week 1: Computation, Python, and JupyterHub &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lecture/Class1_GGR274_IM';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 Lab 1: Intro to Data Science Tools" href="../lab/Lab_1.html" />
+    <link rel="prev" title="Welcome to GGR274" href="Class1_GGR274_MM.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://piazza.com/">Piazza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/announcements">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_1.html">Homework 01 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274 Week 1: Computation, Python, and JupyterHub</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-programming">What is programming?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-python-code">Writing Python code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-download-and-install-python-and-jupyter">Do I need to download and install Python and Jupyter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-software-installation-required">No software installation required!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub-demo">JupyterHub Demo!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-and-learning-to-program-some-things-to-remember">Learning and Learning to Program. Some things to remember</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learning-is-difficult">Why learning is difficult?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-example-ai-edited">Coding Example (AI-edited)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-active-self-learning-strategies">Some Active (Self-)Learning Strategies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-strategies-to-tactics">From strategies to tactics</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-week-1-computation-python-and-jupyterhub">
+<h1>GGR274 Week 1: Computation, Python, and JupyterHub<a class="headerlink" href="#ggr274-week-1-computation-python-and-jupyterhub" title="Link to this heading">#</a></h1>
+<p>David Liu, Ilya Musabirov</p>
+<section id="what-is-programming">
+<h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Link to this heading">#</a></h2>
+<p>A <strong>computer program</strong> is a set of instructions for a computer to execute.</p>
+<p>Just as humans have languages like English to communicate with each other, a <strong>programming language</strong> is a language that allows humans to communicate these instructions to a computer.</p>
+</section>
+<section id="python">
+<h2>Python!<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
+<p>In this course, we’ll be using the <strong>Python</strong> programming language.</p>
+<a class="reference internal image-reference" href="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"><img alt="Python logo" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" style="width: 600px;" /></a>
+</section>
+<section id="why-python">
+<h2>Why Python?<a class="headerlink" href="#why-python" title="Link to this heading">#</a></h2>
+<p>Python is…</p>
+<ul class="simple">
+<li><p>beginner friendly (code looks a lot like English)</p></li>
+<li><p>lots of built-in functionality</p></li>
+<li><p>powerful data science and data visualization libraries (e.g. <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">plotly</span></code>)</p></li>
+<li><p>very commonly used in both academia and industry</p></li>
+</ul>
+</section>
+<section id="writing-python-code">
+<h2>Writing Python code<a class="headerlink" href="#writing-python-code" title="Link to this heading">#</a></h2>
+<p>You’ve seen examples of Python code earlier this lecture. Next week, we’ll start going over the basics of Python programming, but for now, think of Python code as a <em>sequence of very precise instructions that your computer can understand</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ilya&quot;</span>
+<span class="n">my_age</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">13</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">my_name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">my_age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?!&quot;</span><span class="p">)</span>
+
+<span class="n">my_age</span> <span class="o">=</span> <span class="n">my_age</span> <span class="o">+</span> <span class="mi">21</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">my_name</span><span class="si">}</span><span class="s2">, you&#39;re already </span><span class="si">{</span><span class="n">my_age</span><span class="si">}</span><span class="s2"> years old? You should be resting more!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wow Ilya, you&#39;re only 18 years old? Why do they let you teach?!
+Wow Ilya, you&#39;re already 39 years old? You should be resting more!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="notebooks">
+<h2>Notebooks!<a class="headerlink" href="#notebooks" title="Link to this heading">#</a></h2>
+<p>Traditionally, Python code was written in <code class="docutils literal notranslate"><span class="pre">.py</span></code> files, called <strong>Python modules</strong>.</p>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Python_Code.png" alt="Image of Python code" width="500"></center>
+</section>
+<section id="id1">
+<h2>Notebooks!<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>In this course, we’ll use <strong>Jupyter notebooks</strong> to write Python code.</p>
+<p>Notebooks let us mix:</p>
+<ul class="simple">
+<li><p>Python code</p></li>
+<li><p>Output of running the code</p></li>
+<li><p>Text (including nice formatting)</p></li>
+<li><p>Images</p></li>
+<li><p>…and more!</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Notebooks!<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Fun fact</strong>: Jupyter, the software that lets us create notebooks, is written in Python!</p>
+<a class="reference internal image-reference" href="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg"><img alt="Jupyter logo" src="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg" style="width: 500px;" /></a>
+</section>
+<section id="do-i-need-to-download-and-install-python-and-jupyter">
+<h2>Do I need to download and install Python and Jupyter?<a class="headerlink" href="#do-i-need-to-download-and-install-python-and-jupyter" title="Link to this heading">#</a></h2>
+<center><img src="https://underdefense.com/wp-content/uploads/2018/02/1uVYPjj-KTqigXjGC-w7L-7f_4jPtZ00-uzL4iUo-1.jpeg" alt="Meme about software installation wizard" width="500"></center></section>
+<section id="no-software-installation-required">
+<h2>No software installation required!<a class="headerlink" href="#no-software-installation-required" title="Link to this heading">#</a></h2>
+<p>In this course, we’ll be using <strong>JupyterHub</strong> (<a class="reference external" href="https://jupyter.utoronto.ca">https://jupyter.utoronto.ca</a>), which runs Python and Jupyter for us online.</p>
+<ul class="simple">
+<li><p>You can login to JupyterHub from anywhere with an Internet collection</p></li>
+<li><p>All of your files are stored “in the cloud”</p></li>
+<li><p>Runs Python code “in the cloud”</p></li>
+</ul>
+</section>
+<section id="jupyterhub-demo">
+<h2>JupyterHub Demo!<a class="headerlink" href="#jupyterhub-demo" title="Link to this heading">#</a></h2>
+<p>Two ways of accessing JupyterHub:</p>
+<ol class="arabic">
+<li><p>Go to <a class="reference external" href="https://jupyter.utoronto.ca">https://jupyter.utoronto.ca</a></p></li>
+<li><p>Go to any notebook on our course website (<a class="reference external" href="https://uoftcompdsci.github.io/ggr274-20241/">https://uoftcompdsci.github.io/ggr274-20241/</a>) and click on the little rocket icon:</p>
+<p><img alt="Image of JupyterHub launch from course website" src="../../../_images/jupyterhub-launch.png" /></p>
+</li>
+</ol>
+</section>
+<section id="learning-and-learning-to-program-some-things-to-remember">
+<h2>Learning and Learning to Program. Some things to remember<a class="headerlink" href="#learning-and-learning-to-program-some-things-to-remember" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Computer programming languages are actually for people, not for computers :)</p></li>
+<li><p>To some extent, learning a new programming language is quite like learning a new (written) human language, but … easier</p>
+<ul>
+<li><p>Vocabulary is much, much smaller</p></li>
+<li><p>Syntax/Grammar are much simpler</p></li>
+<li><p>The main limitation is that the computer (of pre-GPT era) is much more limited in understanding and thus more strict</p></li>
+<li><p>The real barrier is understanding what <em>you</em> want to do and explaining that in a <em>clear non self-contradictory way</em></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>In addition to writing code, we in this course and you, as you progress, should be learning <strong>reading</strong> code, and doing that effectively might be even more crucial</p>
+<ul>
+<li><p>Data Science tasks rarely start from a blank page</p></li>
+<li><p>You use, assimilate, and adapt the code and ideas of others</p></li>
+<li><p>Quite often, you are in a “menu in an exotic restaurant” situation, and that’s okay!</p></li>
+</ul>
+</li>
+</ul>
+<section id="why-learning-is-difficult">
+<h3>Why learning is difficult?<a class="headerlink" href="#why-learning-is-difficult" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://theeducationhub.org.nz/an-introduction-to-cognitive-load-theory/">An Intro to Cognitive Load Theory (TheEducation Hub)</a></p></li>
+<li><p><a class="reference external" href="https://cdn.theeducationhub.org.nz/wp-content/uploads/2021/02/Cognitive-load-theory-fig1-1024x566.png">Cognitive Load Theory Memory Model</a></p></li>
+</ul>
+</section>
+</section>
+<section id="coding-example-ai-edited">
+<h2>Coding Example (AI-edited)<a class="headerlink" href="#coding-example-ai-edited" title="Link to this heading">#</a></h2>
+<p>Example 1:</p>
+<div class="highlight-perl notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="nb">join</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">scalar</span><span class="w"> </span><span class="nb">reverse</span><span class="w"> </span><span class="nv">$_</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="nb">split</span><span class="w"> </span><span class="sr">/ /</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, this is a sample sentence.&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Example 2:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s1">&#39;Hello, this is a sample sentence.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s1">&#39;Hello, this is a sample sentence.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;,olleH siht si a elpmas .ecnetnes&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Example 3:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
+    <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example 3 (contd)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">reversed_sentence</span><span class="p">:</span>
+        <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+    <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="n">word</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example 4:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Original sentence</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
+<span class="c1"># Split the sentence into individual words</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="c1"># Initialize an empty list to hold reversed words</span>
+<span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Example 4 (contd)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over each word in the sentence</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="c1"># Initialize an empty string to build the reversed word</span>
+    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="c1"># Iterate over each character in the word</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="c1"># Prepend the character to the reversed_word, effectively reversing it</span>
+        <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
+    <span class="c1"># Append the reversed word to the list of reversed_words</span>
+    <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example 4 (contd 2)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string for the reversed sentence</span>
+<span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="c1"># Iterate over each reversed word</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
+    <span class="c1"># If reversed_sentence is not empty, add a space (to separate words)</span>
+    <span class="k">if</span> <span class="n">reversed_sentence</span><span class="p">:</span>
+        <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+    <span class="c1"># Append the current word to the reversed_sentence</span>
+    <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="n">word</span>
+
+<span class="c1"># Print the final reversed sentence</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example 5:</p>
+<ol class="arabic simple">
+<li><p>Splitting the Sentence: The sentence is <strong>split</strong> into words.</p></li>
+<li><p>Reversing Each Word: Each word is reversed using a <strong>nested loop</strong>.</p></li>
+<li><p>Building the Reversed Sentence: The reversed words are then <strong>concatenated</strong> to form the final sentence, with spaces added between words.</p></li>
+<li><p>Printing the Result: The reversed sentence is printed.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s1">&#39;Hello, this is a sample sentence.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+</pre></div>
+</div>
+<section id="some-active-self-learning-strategies">
+<h3>Some Active (Self-)Learning Strategies<a class="headerlink" href="#some-active-self-learning-strategies" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Activating Prior Knowledge</p></li>
+<li><p>Distributing Practice (not cramming!) and Interleaving (not creating interruptions!)</p></li>
+<li><p>Elaborative rehearsal: rephrasing, finding examples, integrating with other constructs, organizing in a meaningful way</p></li>
+</ul>
+</section>
+<section id="from-strategies-to-tactics">
+<h3>From strategies to tactics<a class="headerlink" href="#from-strategies-to-tactics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Reading your own code and the code of others, highlight and annotate it (notebooks are perfect for that)</p>
+<ul>
+<li><p>Use markdown blocks to write down topic sentences and paragraphs,</p></li>
+<li><p>Always assume you will need to reread your code and that you will you remember nothing</p></li>
+<li><p>Dealing with the complex blocks of code you don’t understand just yet, try to write down high-level explanations in plain language</p>
+<ul>
+<li><p>what does it do?</p></li>
+<li><p>what does it take as an input and produce as an output?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Distributed practice and elaborative rehearsal:</p>
+<ul>
+<li><p>Read the lab and homework at the beginning of the week. If you have time, make comments</p></li>
+<li><p>Look at the previous homework to find useful chunks</p></li>
+<li><p>Regularly repeat main commands, functions, and constructs in context</p></li>
+<li><p>For example, modify a bit chunks from previous homework (What if I change 5 to 6, a number to a character, add another variable?)</p></li>
+<li><p>Make notes on connections between terminology and Python syntax, between different ways of writing the same code</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week01/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Class1_GGR274_MM.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to GGR274</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../lab/Lab_1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 Lab 1: Intro to Data Science Tools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-programming">What is programming?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-python-code">Writing Python code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Notebooks!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-download-and-install-python-and-jupyter">Do I need to download and install Python and Jupyter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-software-installation-required">No software installation required!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub-demo">JupyterHub Demo!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-and-learning-to-program-some-things-to-remember">Learning and Learning to Program. Some things to remember</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-learning-is-difficult">Why learning is difficult?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-example-ai-edited">Coding Example (AI-edited)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-active-self-learning-strategies">Some Active (Self-)Learning Strategies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-strategies-to-tactics">From strategies to tactics</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
