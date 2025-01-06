@@ -10,7 +10,7 @@ parts:
       title: Course Syllabus
     - url: https://q.utoronto.ca/courses/380232/announcements
       title: Announcements
-    - url: https://piazza.com/utoronto.ca/winter2025/ggr274h1slec0101/home
+    - url: https://piazza.com/class/m5l5abtof4o78y/post/6
       title: Piazza
     
   - caption: Resources
@@ -22,11 +22,11 @@ parts:
 
   - caption: Week 1
     chapters:
-    - url: https://q.utoronto.ca/courses/380232/announcements
+    - url: https://q.utoronto.ca/courses/380232/files/?preview=35527981
       title: Prof. Li's Slides
     - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
-    - file: weekly-materials/week01/lecture/Class1_GGR274_KR.ipynb
+    - file: weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb
       title: Prof. Reid's Notebook
     - file: weekly-materials/week01/lab/Lab_1.ipynb
       title: Lab 01 Notebook
