@@ -26,7 +26,7 @@ parts:
       title: Prof. Li's Slides
     - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
-    - file: weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb
+    - file: weekly-materials/week01/lecture/Class1_GGR274_KR.ipynb
       title: Prof. Reid's Notebook
     - file: weekly-materials/week01/lab/Lab_1.ipynb
       title: Lab 01 Notebook
