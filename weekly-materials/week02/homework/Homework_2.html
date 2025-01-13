@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GG274 Homework 1: A Python Intro &#8212; Computation and Data Science for Social Sciences</title>
+    <title>GGR274 Homework 2 &#8212; Computation and Data Science for Social Sciences</title>
   
   
   
@@ -60,11 +60,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/homework/Homework_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/homework/Homework_2';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="GGR274 Lab 1: Intro to Data Science Tools" href="../lab/Lab_1.html" />
+    <link rel="next" title="Welcome to GGR274" href="../../week01/lecture/Class1_GGR274_MM.html" />
+    <link rel="prev" title="GGR274 Lab 2: Introduction to Programming, Part 1" href="../lab/Lab_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -174,17 +175,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 2 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 2 Notebook</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_2.html">Lab 2 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 2 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files/?preview=35527981">Prof. Li's Slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecture/Class1_GGR274_IM.html">Prof. Reid's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1.html">Lab 01 Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
 </ul>
 
     </div>
@@ -244,7 +245,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week01/homework/Homework_1.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week02/homework/Homework_2.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +276,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week01/homework/Homework_1.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week02/homework/Homework_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,7 +352,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>GG274 Homework 1: A Python Intro</h1>
+    <h1>GGR274 Homework 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -361,11 +362,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-homework">Purpose of Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-filling-in-some-python-code">Task 1: Filling in some Python code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-a-bit-of-computing">Task 2: A bit of computing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-written-response">Task 3: Written Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-working-with-numbers">Task 1: Working with numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-working-with-strings">Task 2: Working with strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-working-with-lists">Task 3: Working with lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-written-responses">Task 4: Written Responses</a></li>
 </ul>
             </nav>
         </div>
@@ -377,126 +378,124 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="gg274-homework-1-a-python-intro">
-<h1>GG274 Homework 1: A Python Intro<a class="headerlink" href="#gg274-homework-1-a-python-intro" title="Link to this heading">#</a></h1>
-<section id="purpose-of-homework">
-<h2>Purpose of Homework<a class="headerlink" href="#purpose-of-homework" title="Link to this heading">#</a></h2>
-<p>Welcome to your first weekly homework assignment! You are encouraged to refer to lecture content and liberally use course resources such as the discussion board and office hours.</p>
-<p>Homeworks build off of content explored in lecture and in lab and give you an opportunity to practice with the material. Homeworks will contain tasks that focus on tools and knowledge described in lecture and lab that week. Data science knowledge is often cumulative, and you will be asked to refer to prior weeks’ content (such as loading in datasets, which is something you’re going to do a lot of in this course).</p>
-<p>Homeworks may also be continuations of the shorter labs done during that week, and will feature a relatively greater emphasis on application of tools, inquiry of concepts, and interpretation of your data science findings. Homeworks will feature a mix of coding and written response questions.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-homework-2">
+<h1>GGR274 Homework 2<a class="headerlink" href="#ggr274-homework-2" title="Link to this heading">#</a></h1>
 <section id="logistics">
 <h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
-<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 13.</p>
-<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 20.</p>
+<p>You will submit your work on <a class="reference external" href="https://markus.teach.cs.toronto.edu/markus/main/login_remote_auth">MarkUs</a>.
 To submit your work:</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>hw1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_2.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw2</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
 All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
 </ol>
 </section>
-<section id="task-1-filling-in-some-python-code">
-<h2>Task 1: Filling in some Python code<a class="headerlink" href="#task-1-filling-in-some-python-code" title="Link to this heading">#</a></h2>
-<p>Next week, we’ll be introducing the Python programming language more formally.
-For this homework, we’re going to keep things short and ask you to fill in some bits of code and run it, just to get used to the process.</p>
-<p>In the cell below, replace the ellipsis (<code class="docutils literal notranslate"><span class="pre">...</span></code>) with the number of courses you’re taking this semester.</p>
+<section id="task-1-working-with-numbers">
+<h2>Task 1: Working with numbers<a class="headerlink" href="#task-1-working-with-numbers" title="Link to this heading">#</a></h2>
+<p>Canada has a current population of 39,401,996, which we have stored below in the variable <code class="docutils literal notranslate"><span class="pre">canada_population</span></code>.</p>
+<p>Assuming that the population grows at a rate of 1.04% per year, write code in the cell below to calculate the expected population of Canada in 2043, exactly 20 years from now.
+Round your projected number to the nearest integer using the <code class="docutils literal notranslate"><span class="pre">round</span></code> function, and store the final result in a variable called <code class="docutils literal notranslate"><span class="pre">canada_2043</span></code>.</p>
+<p>(As with Homework 1, we know you could use a traditional calculator to do this. Don’t! The purpose of this exercise is to help give you practice with Python.)</p>
+<p><em>Hint</em>: try using the <code class="docutils literal notranslate"><span class="pre">pow</span></code> function, where <code class="docutils literal notranslate"><span class="pre">pow(x,</span> <span class="pre">y)</span></code> calculates “<code class="docutils literal notranslate"><span class="pre">x</span></code> to the power of <code class="docutils literal notranslate"><span class="pre">y</span></code>”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_courses</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># Replace the ... with your number of courses</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">canada_population</span> <span class="o">=</span> <span class="mi">39401996</span>
 
-<span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are taking </span><span class="si">{</span><span class="n">num_courses</span><span class="si">}</span><span class="s2"> course(s).&quot;</span><span class="p">)</span>
+<span class="c1"># Write your code below. You can do it in one line, or use variables to split up</span>
+<span class="c1"># your code into multiple steps. Just make sure your final result is stored in</span>
+<span class="c1"># canada_2043.</span>
+
+
+
+<span class="c1"># The following code is provided to help test your work.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The expected population of Canada in 2043 is </span><span class="si">{</span><span class="n">canada_2043</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>You should see something like <code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">are</span> <span class="pre">taking</span> <span class="pre">5</span> <span class="pre">course(s).</span></code> in the output when you run the cell.</p>
-<p>Next, we have two new variables, <code class="docutils literal notranslate"><span class="pre">first_name</span></code> and <code class="docutils literal notranslate"><span class="pre">last_name</span></code>.
-Replace each <code class="docutils literal notranslate"><span class="pre">...</span></code> with your first and last name, respectively.</p>
-<p><em>Be sure to surround your name with quotes, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;David&quot;</span></code>, not just <code class="docutils literal notranslate"><span class="pre">David</span></code>.</em>
-This tells Python that your name should be interpreted as data (i.e., a name) rather than code or a variable.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># Replace the ... with your first name, surrounded by quotes</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="o">...</span>   <span class="c1"># Replace the ... with your last name, surrounded by quotes</span>
-
-<span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">, and welcome to GGR274!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Did you see a welcome message with your name appear?
-If not, please ask for help if you get stuck!</p>
 </section>
-<section id="task-2-a-bit-of-computing">
-<h2>Task 2: A bit of computing<a class="headerlink" href="#task-2-a-bit-of-computing" title="Link to this heading">#</a></h2>
-<p>Now, let’s see how we can use Python like a calculator, where we write <em>code</em> instead of pushing buttons.
-Consider the following problem:</p>
-<blockquote>
-<div><p>At the time of writing, the population of Canada is 39,395,674, and the population of Ontario is 15,308,317 (<a class="reference external" href="https://www150.statcan.gc.ca/n1/pub/71-607-x/71-607-x2018005-eng.htm">Statistics Canada</a>). What percentage of Canada’s total population lives in Ontario?</p>
-</div></blockquote>
-<p>To answer this problem, we need to do the following: divide Ontario’s population by Canada’s population, and then (to convert to a percentage), multiply the result by 100.</p>
-<p>While you could do this on a calculator, we want you to use Python instead!
-In the cell below, calculate this percentage, and store the result in a variable called <code class="docutils literal notranslate"><span class="pre">ontario_percentage</span></code>.
-You can copy and paste the population numbers from the above paragraph, except you’ll need to <em>delete the commas</em>, since Python expects just a sequence of digits for a number.
-Remember from the lab that you can perform a calculation and store the result in a variable in a single line of code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">five</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>
-</pre></div>
-</div>
-<p>You’ll find the following <em>table of Python arithmetic operations</em> helpful (more on this in next week’s class):</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Operation</p></th>
-<th class="head"><p>Symbol</p></th>
-<th class="head"><p>Example Python code</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Addition</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">2</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Subtraction</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>Multiplication</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Division</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">/</span> <span class="pre">2</span></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="task-2-working-with-strings">
+<h2>Task 2: Working with strings<a class="headerlink" href="#task-2-working-with-strings" title="Link to this heading">#</a></h2>
+<p>The following cell contains a variable <code class="docutils literal notranslate"><span class="pre">charter</span></code> that contains the opening sentence of the <a class="reference external" href="https://laws-lois.justice.gc.ca/eng/const/page-12.html">Canadian Charter of Rights and Freedoms</a>.</p>
+<p>Below the variable, define the following new variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">charter_uppercase</span></code>, a <code class="docutils literal notranslate"><span class="pre">str</span></code> consisting of the same text as <code class="docutils literal notranslate"><span class="pre">charter</span></code>, but written in ALL CAPS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">charter_length</span></code>, an <code class="docutils literal notranslate"><span class="pre">int</span></code> that stores the length (i.e., number of characters) in <code class="docutils literal notranslate"><span class="pre">charter</span></code>. This includes all punctuation marks and spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">charter_words</span></code>, a <code class="docutils literal notranslate"><span class="pre">list</span></code> of <code class="docutils literal notranslate"><span class="pre">str</span></code> that contains the text in <code class="docutils literal notranslate"><span class="pre">charter</span></code>, split up at the spaces. (Note: punctuation is included in the “words”, and that’s okay. So the last word in <code class="docutils literal notranslate"><span class="pre">charter_words</span></code> will be <code class="docutils literal notranslate"><span class="pre">'society.'</span></code>, not <code class="docutils literal notranslate"><span class="pre">'society'</span></code>.)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace the ... with an arithmetic expression to calculate the desired percentage</span>
-<span class="n">ontario_percentage</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span> <span class="o">=</span> <span class="s2">&quot;The Canadian Charter of Rights and Freedoms guarantees the rights and freedoms set out in it subject only to such reasonable limits prescribed by law as can be demonstrably justified in a free and democratic society.&quot;</span>
 
+<span class="c1"># Replace the ... below with your code.</span>
 
-<span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ontario has </span><span class="si">{</span><span class="n">ontario_percentage</span><span class="si">}</span><span class="s2">% of Canada&#39;s Total Population&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+
+<span class="c1"># We have provided the following code to test your work.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The contents of charter in ALL CAPS:</span><span class="se">\n</span><span class="s2">    </span><span class="si">{</span><span class="n">charter_uppercase</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length of charter: </span><span class="si">{</span><span class="n">charter_length</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The words in charter:</span><span class="se">\n</span><span class="s2">    </span><span class="si">{</span><span class="n">charter_words</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Note</strong>: you should see a percentage with lots of decimal places. Don’t worry about rounding for this problem; we’ll discuss how to round numbers in Python next week.</p>
 </section>
-<section id="task-3-written-response">
-<h2>Task 3: Written Response<a class="headerlink" href="#task-3-written-response" title="Link to this heading">#</a></h2>
-<p>Finally, we want to give you practice using Markdown to create text inside a Jupyter notebook.</p>
-<p><strong>Create a new Markdown cell</strong> (same process as Lab 1), and inside the cell write answers to the following questions:</p>
+<section id="task-3-working-with-lists">
+<h2>Task 3: Working with lists<a class="headerlink" href="#task-3-working-with-lists" title="Link to this heading">#</a></h2>
+<p>The following variable <code class="docutils literal notranslate"><span class="pre">ceo_salaries</span></code> contains (some of) the top CEO salaries from Fortune 500 companies in 2021 (<a class="reference external" href="https://aflcio.org/paywatch/highest-paid-ceos">AFL-CIO</a>), in descending order.</p>
+<p>Using this list, compute:</p>
 <ol class="arabic simple">
-<li><p>What kinds of data are you interested in working with this semester?</p></li>
-<li><p>What are your first impressions of our course software: Python, Jupyter notebooks, and JupyterHub?</p></li>
-<li><p>What are you looking forward to in GGR274?</p></li>
-<li><p>What are you looking forward to be able to do after you complete GGR274?</p></li>
-<li><p>What are three music artists or groups you like? (Important question!)</p></li>
+<li><p>The <em>number of salaries</em> contained in the list, and store it in a variable called <code class="docutils literal notranslate"><span class="pre">num_salaries</span></code>.</p></li>
+<li><p>The <em>maximum</em> salary contained in the list, and store it in the variable called <code class="docutils literal notranslate"><span class="pre">max_salary</span></code>. Use the <code class="docutils literal notranslate"><span class="pre">max</span></code> function to calculate this.</p></li>
+<li><p>The <em>average</em> of the salaries contained in the list, rounded to 2 decimal places. Store this average in a variable called <code class="docutils literal notranslate"><span class="pre">avg_salary</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ceo_salaries</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">296247749</span><span class="p">,</span>
+    <span class="mi">212701169</span><span class="p">,</span>
+    <span class="mi">178590400</span><span class="p">,</span>
+    <span class="mi">165802037</span><span class="p">,</span>
+    <span class="mi">98734394</span><span class="p">,</span>
+    <span class="mi">84428145</span><span class="p">,</span>
+    <span class="mi">65996985</span><span class="p">,</span>
+    <span class="mi">65887214</span><span class="p">,</span>
+    <span class="mi">60703627</span><span class="p">,</span>
+    <span class="mi">57923473</span><span class="p">,</span>
+    <span class="mi">53982195</span><span class="p">,</span>
+    <span class="mi">49858280</span><span class="p">,</span>
+    <span class="mi">41860263</span><span class="p">,</span>
+    <span class="mi">40823725</span><span class="p">,</span>
+    <span class="mi">40584292</span><span class="p">,</span>
+    <span class="mi">39545072</span><span class="p">,</span>
+    <span class="mi">37809810</span><span class="p">,</span>
+    <span class="mi">36128725</span><span class="p">,</span>
+    <span class="mi">35265559</span><span class="p">,</span>
+    <span class="mi">34941635</span>
+<span class="p">]</span>
+
+
+<span class="c1"># Replace the ... below with your code.</span>
+
+<span class="o">...</span>
+
+<span class="c1"># We have provided the following code to test your work.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number of salaries in the list: </span><span class="si">{</span><span class="n">num_salaries</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum salary in the list: </span><span class="si">{</span><span class="n">max_salary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average salary: </span><span class="si">{</span><span class="n">avg_salary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4-written-responses">
+<h2>Task 4: Written Responses<a class="headerlink" href="#task-4-written-responses" title="Link to this heading">#</a></h2>
+<p>Create a <strong>new Markdown cell below</strong> that answers the following questions:</p>
+<ol class="arabic simple">
+<li><p><em>Explain</em> the difference between <code class="docutils literal notranslate"><span class="pre">=</span></code> and <code class="docutils literal notranslate"><span class="pre">==</span></code> in Python.</p></li>
+<li><p><em>Explain</em> the difference between the string methods <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> and <code class="docutils literal notranslate"><span class="pre">str.isupper()</span></code>.
+(We didn’t cover <code class="docutils literal notranslate"><span class="pre">str.isupper()</span></code> in lecture; create a new code cell and try calling it to see what it does!)</p></li>
 </ol>
 </section>
 </section>
@@ -514,7 +513,7 @@ Remember from the lab that you can perform a calculation and store the result in
         },
         kernelOptions: {
             name: "python3",
-            path: "./weekly-materials/week01/homework"
+            path: "./weekly-materials/week02/homework"
         },
         predefinedOutput: true
     }
@@ -532,13 +531,22 @@ Remember from the lab that you can perform a calculation and store the result in
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_1.html"
+       href="../lab/Lab_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 1: Intro to Data Science Tools</p>
+        <p class="prev-next-title">GGR274 Lab 2: Introduction to Programming, Part 1</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../../week01/lecture/Class1_GGR274_MM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Welcome to GGR274</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -557,11 +565,11 @@ Remember from the lab that you can perform a calculation and store the result in
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-homework">Purpose of Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-filling-in-some-python-code">Task 1: Filling in some Python code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-a-bit-of-computing">Task 2: A bit of computing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-written-response">Task 3: Written Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-working-with-numbers">Task 1: Working with numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-working-with-strings">Task 2: Working with strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-working-with-lists">Task 3: Working with lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-written-responses">Task 4: Written Responses</a></li>
 </ul>
   </nav></div>
 
