@@ -20,6 +20,12 @@ parts:
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
 
+  - caption: Week 2
+    chapters:
+    - file: weekly-materials/week02/lab/Lab_2.ipynb
+      title: Lab 2 Notebook
+    - file: weekly-materials/week02/homework/Homework_2.ipynb
+      title: Homework 2 Notebook
   - caption: Week 1
     chapters:
     - url: https://q.utoronto.ca/courses/380232/files/?preview=35527981
