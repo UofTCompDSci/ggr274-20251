@@ -20,6 +20,21 @@ parts:
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
 
+  - caption: Week 3
+    chapters:
+    - file: weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb
+      title: Prof. Reid's Notebook
+    - file: weekly-materials/week03/lecture/ED-Canada_2016.csv
+      title: ED-Canada_2016.csv
+    - file: weekly-materials/week03/lab/Lab_3.ipynb
+      title: Lab 3 Notebook
+    - file: weekly-materials/week03/lab/ED-Canada_2016.csv
+      title: ED-Canada_2016.csv
+    - file: weekly-materials/week03/homework/Homework_3.ipynb
+      title: Homework 3 Notebook
+    - file: weekly-materials/week03/homework/reviews.txt
+      title: reviews.txt
+
   - caption: Week 2
     chapters:
     - file: weekly-materials/week02/lecture/Class2_GGR274_KR.ipynb
