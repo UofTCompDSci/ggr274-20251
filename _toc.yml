@@ -24,6 +24,8 @@ parts:
     chapters:
     - file: weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb
       title: Prof. Reid's Notebook
+    - file: weekly-materials/week03/lecture/Class3_GGR274_KR_solutions.ipynb
+      title: Prof. Reid's Notebook with exercise solutions
     - file: weekly-materials/week03/lecture/ED-Canada_2016.csv
       title: ED-Canada_2016.csv
     - file: weekly-materials/week03/lab/Lab_3.ipynb
@@ -39,6 +41,8 @@ parts:
     chapters:
     - file: weekly-materials/week02/lecture/Class2_GGR274_KR.ipynb
       title: Prof. Reid's Notebook
+    - file: weekly-materials/week02/lecture/Class2_GGR274_KR_sol.ipynb
+      title: Prof. Reid's Notebook with exercise solutions
     - file: weekly-materials/week02/lab/Lab_2.ipynb
       title: Lab 2 Notebook
     - file: weekly-materials/week02/homework/Homework_2.ipynb
