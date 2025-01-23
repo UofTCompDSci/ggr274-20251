@@ -60,12 +60,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lecture/Class2_GGR274_KR';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lecture/Class2_GGR274_KR_sol';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Lecture 2: Introduction to Python Programming, Part 1" href="Class2_GGR274_KR_sol.html" />
-    <link rel="prev" title="GGR274 Homework 3" href="../../week03/homework/Homework_3.html" />
+    <link rel="next" title="GGR274 Lab 2: Introduction to Programming, Part 1" href="../lab/Lab_2.html" />
+    <link rel="prev" title="Lecture 2: Introduction to Python Programming, Part 1" href="Class2_GGR274_KR.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -183,8 +183,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Class2_GGR274_KR_sol.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class2_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook with exercise solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_2.html">Lab 2 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_2.html">Homework 2 Notebook</a></li>
 </ul>
@@ -254,7 +254,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week02/lecture/Class2_GGR274_KR.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week02/lecture/Class2_GGR274_KR_sol.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +285,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week02/lecture/Class2_GGR274_KR.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week02/lecture/Class2_GGR274_KR_sol.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -496,6 +496,14 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your Python code in the space below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Solution</strong> (only look at this after attempting the exercise!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">15.99</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">0.13</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -717,6 +725,14 @@ A string is a sequence of <em>characters</em>, where each character could be:</p
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code in the space below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Solution</strong> (only look at this after attempting the exercise!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;Michael Moon&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -972,11 +988,6 @@ This lets us write one block of code where we define variables and use them in t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
 </div>
 <p>We can compute the length of a list using the <code class="docutils literal notranslate"><span class="pre">len</span></code> function:</p>
 <div class="cell docutils container">
@@ -990,11 +1001,6 @@ This lets us write one block of code where we define variables and use them in t
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
 </pre></div>
 </div>
 </div>
@@ -1019,6 +1025,21 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </div>
 </div>
+<p><strong>Solution</strong> (only look at this cell after attempting the above exercise!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">274</span><span class="p">,</span> <span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Write your code in the space below</span>
+<span class="n">my_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_numbers</span><span class="p">)</span>
+<span class="n">my_sum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">my_numbers</span><span class="p">)</span>
+<span class="n">my_avg</span> <span class="o">=</span> <span class="n">my_len</span> <span class="o">/</span> <span class="n">my_sum</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average of my_numbers is </span><span class="si">{</span><span class="n">my_avg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="id1">
 <h2>Learning objectives<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
@@ -1036,7 +1057,7 @@ This lets us write one block of code where we define variables and use them in t
 </li>
 <li><p>Store values and the results of computations in variables</p>
 <ul>
-<li><p>e.g. <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;Karen&quot;</span></code></p></li>
+<li><p>e.g. <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;David&quot;</span></code></p></li>
 </ul>
 </li>
 <li><p>Run Python code and display results in a Jupyter notebook (like this one!)</p></li>
@@ -1075,20 +1096,20 @@ This lets us write one block of code where we define variables and use them in t
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../week03/homework/Homework_3.html"
+       href="Class2_GGR274_KR.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Homework 3</p>
+        <p class="prev-next-title">Lecture 2: Introduction to Python Programming, Part 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="Class2_GGR274_KR_sol.html"
+       href="../lab/Lab_2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 2: Introduction to Python Programming, Part 1</p>
+        <p class="prev-next-title">GGR274 Lab 2: Introduction to Programming, Part 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -62,12 +62,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lecture/Class3_GGR274_KR';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lecture/Class3_GGR274_KR_solutions';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lecture 3: Introduction to Programming, Part 2" href="Class3_GGR274_KR_solutions.html" />
-    <link rel="prev" title="Guide to Using MarkUs" href="../../../guides/markus_guide.html" />
+    <link rel="next" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="../lab/Lab_3.html" />
+    <link rel="prev" title="GGR274 Lecture 3: Introduction to Programming, Part 2" href="Class3_GGR274_KR.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -178,8 +178,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Class3_GGR274_KR_solutions.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class3_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook with exercise solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3.html">Lab 3 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3.html">Homework 3 Notebook</a></li>
 </ul>
@@ -256,7 +256,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week03/lecture/Class3_GGR274_KR_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +287,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week03/lecture/Class3_GGR274_KR_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -681,8 +681,8 @@
 <section id="exercise-break">
 <h2>Exercise Break<a class="headerlink" href="#exercise-break" title="Link to this heading">#</a></h2>
 <p>When is a year a leap year?  A leap year is a year that has 366 days by adding February 29 to the calendar.  Leap years occur on years that are evenly divisible by 4, except years that are evenly divisible by 100 but not by 400.</p>
-<p>Write conditional statements so that the statement <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is a leap year and <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is not a leap year.</p>
 <p>This question uses the modulus operator, <code class="docutils literal notranslate"><span class="pre">%</span></code>, which finds the integer remainder of the division between two integers.  For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">4</span> <span class="pre">==</span> <span class="pre">0</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is evenly divisible by 4.  In other words <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">4</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">4</span></code> has no remainder.</p>
+<p>Write condtional statements below so that the statement <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is a leap year and <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is not a leap year.</p>
 <p>Test your statements on the following years:</p>
 <ul class="simple">
 <li><p>2025 is not a leap year</p></li>
@@ -692,9 +692,23 @@
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span>
+<span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is a leap year&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is not a leap year&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is a leap year&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is not a leap year&quot;</span><span class="p">)</span>
 
-<span class="c1"># write your code here   </span>
+<span class="c1"># or more compactly </span>
+<span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is a leap year&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> is not a leap year&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -808,11 +822,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 12]
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -832,6 +841,36 @@
 <span class="c1"># Write your code for Question 2 here.</span>
 
 <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solutions (only look at this after attempting the problems yourself!)</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+
+<span class="c1"># Question 1</span>
+<span class="n">lengths1</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">):</span>
+        <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">lengths1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_length</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lengths1 is </span><span class="si">{</span><span class="n">lengths1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Question 2</span>
+<span class="n">lengths2</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">name_length</span> <span class="o">&gt;=</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="n">lengths2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_length</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lengths2 is </span><span class="si">{</span><span class="n">lengths2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
 </pre></div>
 </div>
 </div>
@@ -918,348 +957,6 @@ Let’s learn how to do this in JupyterHub and Python!</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[86494,
- 74116,
- 77680,
- 27197,
- 86553,
- 85697,
- 81979,
- 36615,
- 36094,
- 34168,
- 36030,
- 71913,
- 71962,
- 80590,
- 92301,
- 94610,
- 96255,
- 83465,
- 86498,
- 91830,
- 72148,
- 82026,
- 77791,
- 82292,
- 83303,
- 79943,
- 60378,
- 57405,
- 92666,
- 65287,
- 79363,
- 68673,
- 87787,
- 103491,
- 117447,
- 101373,
- 95781,
- 71897,
- 108746,
- 96029,
- 94588,
- 114966,
- 117343,
- 100371,
- 101840,
- 99787,
- 101032,
- 103457,
- 107582,
- 84918,
- 107254,
- 93674,
- 97887,
- 81639,
- 105459,
- 112866,
- 103397,
- 75850,
- 107464,
- 106496,
- 103592,
- 105419,
- 104136,
- 89818,
- 106336,
- 105496,
- 104911,
- 108579,
- 106766,
- 113815,
- 111835,
- 108003,
- 106583,
- 113528,
- 108703,
- 103346,
- 117238,
- 92518,
- 87233,
- 117652,
- 97811,
- 107981,
- 95527,
- 103320,
- 104974,
- 102088,
- 110750,
- 108587,
- 115531,
- 115313,
- 97143,
- 116066,
- 107242,
- 102346,
- 112156,
- 110677,
- 101750,
- 102693,
- 111190,
- 98828,
- 113212,
- 110264,
- 112826,
- 111139,
- 111176,
- 119227,
- 111575,
- 110515,
- 114659,
- 111867,
- 119677,
- 79483,
- 115227,
- 109286,
- 100788,
- 109735,
- 109468,
- 102270,
- 122000,
- 118180,
- 121188,
- 130000,
- 130296,
- 107679,
- 123180,
- 115463,
- 109619,
- 108473,
- 94579,
- 110076,
- 102508,
- 128237,
- 130872,
- 114395,
- 115052,
- 125442,
- 118022,
- 129081,
- 118040,
- 111065,
- 109975,
- 131794,
- 109652,
- 113956,
- 100103,
- 107848,
- 104877,
- 113024,
- 94333,
- 106570,
- 110960,
- 62556,
- 131995,
- 117543,
- 105258,
- 100709,
- 105309,
- 105331,
- 101630,
- 100546,
- 119467,
- 125362,
- 126110,
- 126064,
- 99078,
- 123318,
- 114093,
- 124849,
- 120205,
- 122560,
- 117444,
- 118240,
- 118301,
- 119110,
- 117418,
- 109067,
- 136292,
- 90838,
- 93772,
- 88813,
- 112412,
- 120923,
- 129078,
- 126764,
- 118038,
- 128281,
- 121058,
- 111508,
- 111837,
- 113790,
- 108805,
- 94398,
- 107908,
- 118176,
- 112947,
- 103495,
- 110177,
- 102918,
- 111691,
- 107900,
- 105337,
- 80371,
- 105542,
- 112603,
- 102386,
- 98800,
- 102275,
- 110278,
- 129944,
- 111332,
- 115506,
- 103320,
- 91532,
- 112719,
- 82805,
- 82651,
- 83257,
- 103805,
- 106875,
- 104311,
- 105228,
- 110134,
- 120981,
- 128377,
- 118801,
- 117429,
- 122988,
- 104319,
- 104010,
- 116686,
- 108037,
- 88170,
- 82574,
- 87027,
- 87527,
- 92738,
- 84077,
- 97354,
- 99946,
- 89818,
- 94778,
- 85949,
- 95676,
- 99678,
- 93053,
- 73506,
- 68353,
- 70891,
- 80662,
- 79733,
- 79625,
- 92426,
- 76017,
- 84153,
- 82946,
- 82663,
- 83711,
- 72635,
- 71031,
- 135762,
- 110223,
- 115022,
- 119176,
- 122023,
- 111830,
- 112087,
- 121844,
- 115795,
- 131823,
- 147520,
- 121392,
- 135730,
- 109941,
- 112287,
- 121048,
- 118561,
- 120863,
- 106066,
- 121869,
- 158749,
- 113227,
- 110230,
- 117327,
- 108451,
- 117394,
- 106896,
- 109965,
- 119019,
- 128786,
- 121313,
- 122193,
- 120784,
- 101979,
- 101814,
- 102486,
- 111973,
- 108907,
- 110293,
- 100126,
- 117640,
- 123576,
- 114647,
- 108052,
- 103064,
- 116958,
- 124358,
- 119388,
- 112354,
- 117017,
- 94825,
- 122710,
- 115340,
- 124605,
- 115344,
- 101101,
- 110817,
- 110995,
- 98396,
- 120834,
- 107339,
- 88920,
- 114695,
- 104051,
- 99913,
- 120172,
- 114605,
- 116443,
- 115724,
- 103456,
- 105466,
- 104870,
- 105608,
- 102927,
- 117133,
- 119113,
- 35874,
- 41786,
- 35944]
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="now-we-can-compute">
@@ -1277,15 +974,6 @@ Let’s learn how to do this in JupyterHub and Python!</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum district population: </span><span class="si">{</span><span class="n">max_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum district population: </span><span class="si">{</span><span class="n">min_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average district population: </span><span class="si">{</span><span class="n">avg_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of population entries: 338.
-Sum of populations: 35151728.
-Maximum district population: 158749.
-Minimum district population: 27197.
-Average district population: 103999.19526627219.
 </pre></div>
 </div>
 </div>
@@ -1356,7 +1044,10 @@ Average district population: 103999.19526627219.
 <p>In English what we want to do is check each dictionary key to see if the string <code class="docutils literal notranslate"><span class="pre">Toronto</span></code> is in the key. If it is, then we will print the message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">district</span> <span class="ow">in</span> <span class="n">district_populations_dict</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;Toronto&quot;</span> <span class="ow">in</span> <span class="n">district</span><span class="p">:</span>
+        <span class="n">population</span> <span class="o">=</span> <span class="n">district_populations_dict</span><span class="p">[</span><span class="n">district</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">district</span><span class="si">}</span><span class="s2"> has population </span><span class="si">{</span><span class="n">population</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1478,20 +1169,20 @@ For us, a dictionary can map <em>column names</em> (strings) to <em>column value
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../../guides/markus_guide.html"
+       href="Class3_GGR274_KR.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Guide to Using MarkUs</p>
+        <p class="prev-next-title">GGR274 Lecture 3: Introduction to Programming, Part 2</p>
       </div>
     </a>
     <a class="right-next"
-       href="Class3_GGR274_KR_solutions.html"
+       href="../lab/Lab_3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lecture 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
