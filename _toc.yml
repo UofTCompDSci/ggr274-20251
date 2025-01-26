@@ -20,6 +20,17 @@ parts:
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
 
+  - caption: Week 4
+    chapters:
+    - url: https://q.utoronto.ca/courses/380232/files?preview=35853230
+      title: Prof. Li's Slides
+    - file: weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+    - file: weekly-materials/week04/lecture/gss_tu2016_codebook.txt
+      title: GSS TU 2016 Codebook
+    - file: weekly-materials/week04/lecture/gss_tu2016_main_file.csv
+      title: GSS TU 2016 CSV Data File
+    
   - caption: Week 3
     chapters:
     - file: weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb
