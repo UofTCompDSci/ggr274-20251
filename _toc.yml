@@ -22,7 +22,7 @@ parts:
 
   - caption: Midterm
     chapters:
-    - url: practice/sample_midterm/GGR274_Midterm.ipynb
+    - file: practice/sample_midterm/GGR274_Midterm.ipynb
       title: Midterm practice
 
   - caption: Week 4
