@@ -62,12 +62,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lecture/Class4_GGR274_MM';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lecture/Class4_GGR274_MM_solution';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Lecture 4: Introduction to pandas and Data Wrangling" href="Class4_GGR274_MM_solution.html" />
-    <link rel="prev" title="GGR274 midterm test (2025 Winter Practice)" href="../../../practice/sample_midterm/GGR274_Midterm.html" />
+    <link rel="next" title="GGR274 Lab 4: Introduction to Data Wrangling, Part 1" href="../lab/Lab_4.html" />
+    <link rel="prev" title="Lecture 4: Introduction to pandas and Data Wrangling" href="Class4_GGR274_MM.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -183,8 +183,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=35904876">Prof. Li's Slides</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Class4_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook with Exercise Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_4.html">Lab 4 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_4.html">Homework 4 Notebook</a></li>
 </ul>
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week04/lecture/Class4_GGR274_MM_solution.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week04/lecture/Class4_GGR274_MM_solution.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -536,6 +536,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: [0, 1, 2], &#39;person&#39;: [&#39;Michael Moon&#39;, &#39;Karen Reid&#39;, &#39;Chunjiang Li&#39;], &#39;department&#39;: [&#39;STA&#39;, &#39;DCS&#39;, &#39;GGR&#39;]}
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Or, we can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
@@ -548,6 +553,62 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_13146/3023373319.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>person</th>
+      <th>department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Michael Moon</td>
+      <td>STA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Karen Reid</td>
+      <td>DCS</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Chunjiang Li</td>
+      <td>GGR</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="id1">
@@ -588,6 +649,14 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Michael Moon
+1      Karen Reid
+2    Chunjiang Li
+dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -599,12 +668,27 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">department_series</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a pd.Series can do what a list can do!</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">department_series</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+STA
 </pre></div>
 </div>
 </div>
@@ -621,10 +705,26 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;STA&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1    False
+2    False
+dtype: bool
 </pre></div>
 </div>
 </div>
@@ -633,6 +733,22 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
+
+<span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;GGR&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2     True
+dtype: bool
 </pre></div>
 </div>
 </div>
@@ -646,6 +762,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1    False
+2     True
+dtype: bool
+</pre></div>
+</div>
+</div>
 </div>
 <p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">GGR</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 <div class="cell docutils container">
@@ -653,6 +783,20 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
 
 <span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;STA&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;GGR&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2    False
+dtype: bool
 </pre></div>
 </div>
 </div>
@@ -667,7 +811,24 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
 
+<span class="c1"># (equal to &quot;STA&quot;)      not equal to       (equal to &quot;GGR&quot;)</span>
+<span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;STA&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s2">&quot;GGR&quot;</span><span class="p">)</span>
+
 <span class="c1"># TRY!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+dtype: object
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1    False
+2     True
+dtype: bool
 </pre></div>
 </div>
 </div>
@@ -723,6 +884,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can create a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of GGR274 course faculty.</p>
 <div class="cell docutils container">
@@ -736,6 +902,14 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;academic department&#39;: [&#39;STA&#39;, &#39;DCS&#39;, &#39;GGR&#39;],
+ &#39;faculty&#39;: [&#39;Michael Moon&#39;, &#39;Karen Reid&#39;, &#39;Chunjiang Li&#39;],
+ &#39;favourite candy&#39;: [&#39;red licorice&#39;, &#39;caramel apple salt&#39;, &#39;cherry sours&#39;],
+ &#39;name length&#39;: [12, 10, 12]}
+</pre></div>
+</div>
+</div>
 </div>
 <p>Let’s store <code class="docutils literal notranslate"><span class="pre">data</span></code> in a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
 <div class="cell docutils container">
@@ -744,6 +918,56 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+      <th>favourite candy</th>
+      <th>name length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>STA</td>
+      <td>Michael Moon</td>
+      <td>red licorice</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DCS</td>
+      <td>Karen Reid</td>
+      <td>caramel apple salt</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+      <td>cherry sours</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Now, let’s store the pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> above in a variable called <code class="docutils literal notranslate"><span class="pre">GGR274fac_df</span></code>.</p>
 <div class="cell docutils container">
@@ -754,6 +978,56 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+      <th>favourite candy</th>
+      <th>name length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>STA</td>
+      <td>Michael Moon</td>
+      <td>red licorice</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DCS</td>
+      <td>Karen Reid</td>
+      <td>caramel apple salt</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+      <td>cherry sours</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values">
@@ -767,11 +1041,110 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  academic department       faculty     favourite candy  name length
+0                 STA  Michael Moon        red licorice           12
+1                 DCS    Karen Reid  caramel apple salt           10
+2                 GGR  Chunjiang Li        cherry sours           12
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+      <th>favourite candy</th>
+      <th>name length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>STA</td>
+      <td>Michael Moon</td>
+      <td>red licorice</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+      <td>cherry sours</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>What happened?</p></li>
 <li><p>How can I remove the first row?</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+      <th>favourite candy</th>
+      <th>name length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>DCS</td>
+      <td>Karen Reid</td>
+      <td>caramel apple salt</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+      <td>cherry sours</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <a class="reference internal image-reference" href="../../../_images/qrcode-quiz.png"><img alt="../../../_images/qrcode-quiz.png" src="../../../_images/qrcode-quiz.png" style="width: 300px;" /></a>
 </section>
 <section id="select-columns-of-a-dataframe-using-a-list-of-column-names">
@@ -786,6 +1159,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;academic department&#39;, &#39;faculty&#39;, &#39;favourite candy&#39;, &#39;name length&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>To select the column <code class="docutils literal notranslate"><span class="pre">favourite</span> <span class="pre">candy</span></code> we can add it in quotation marks inside the square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> name.</p></li>
@@ -797,38 +1175,182 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0          red licorice
+1    caramel apple salt
+2          cherry sours
+Name: favourite candy, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list_of_column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">,</span> <span class="s2">&quot;name length&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list_of_column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">,</span> <span class="s2">&quot;name length&quot;</span><span class="p">]</span> <span class="c1"># throws an error</span>
 
 <span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_list_of_column_names</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>favourite candy</th>
+      <th>name length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>red licorice</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>caramel apple salt</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>cherry sours</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">GGR274fac_df[my_list_of_column_names]</span></code></p>
 <p>is NOT the same as</p>
 <p><code class="docutils literal notranslate"><span class="pre">GGR274fac_df[&quot;favourite</span> <span class="pre">candy&quot;,</span> <span class="pre">&quot;name</span> <span class="pre">length&quot;]</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">,</span> <span class="s2">&quot;name lenth&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">,</span> <span class="s2">&quot;name lenth&quot;</span><span class="p">]</span> <span class="c1"># throws an error</span>
+<span class="c1"># you need to pass a list not multiple strings</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/envs/ggr274/lib/python3.10/site-packages/pandas/core/indexes/base.py:3802,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File index.pyx:153,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File index.pyx:182,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7081,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7089,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: (&#39;favourite candy&#39;, &#39;name lenth&#39;)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">GGR274fac_df</span><span class="p">[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">,</span> <span class="s2">&quot;name lenth&quot;</span><span class="p">]</span> <span class="c1"># throws an error</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># you need to pass a list not multiple strings</span>
+
+<span class="nn">File ~/anaconda3/envs/ggr274/lib/python3.10/site-packages/pandas/core/frame.py:4090,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4088</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4089</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4090</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4091</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">4092</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File ~/anaconda3/envs/ggr274/lib/python3.10/site-packages/pandas/core/indexes/base.py:3809,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3804</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span>         <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3809</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3810</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3811</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3812</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3813</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3814</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: (&#39;favourite candy&#39;, &#39;name lenth&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a single-element list is still a list and returns DataFrame!</span>
+<span class="n">GGR274fac_df</span><span class="p">[[</span><span class="s2">&quot;favourite candy&quot;</span><span class="p">]]</span> 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>favourite candy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>red licorice</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>caramel apple salt</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>cherry sours</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df_column_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">GGR274fac_df</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The list of column names is: </span><span class="si">{</span><span class="n">GGR274fac_df_column_names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The list of column names is: [&#39;academic department&#39;, &#39;faculty&#39;, &#39;favourite candy&#39;, &#39;name length&#39;]
 </pre></div>
 </div>
 </div>
@@ -839,10 +1361,23 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;academic department&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">GGR274fac_df_column_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    STA
+1    DCS
+2    GGR
+Name: academic department, dtype: object
 </pre></div>
 </div>
 </div>
@@ -871,6 +1406,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[True, False, True]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -882,6 +1422,43 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>STA</td>
+      <td>Michael Moon</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="select-rows-and-columns-of-a-dataframe">
@@ -895,10 +1472,47 @@ is <strong>NOT EQUAL</strong> to<br />
 <p>to select rows and columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_important_condition</span><span class="p">][</span><span class="n">my_important_columns</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>academic department</th>
+      <th>faculty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>STA</td>
+      <td>Michael Moon</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GGR</td>
+      <td>Chunjiang Li</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="exercise">
@@ -912,9 +1526,61 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create your DataFrame here.</span>
+<span class="n">my_peers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Michael Moon&quot;</span><span class="p">,</span> <span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;distance to home&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Far, far, far away&quot;</span><span class="p">,</span> <span class="s2">&quot;Pretty far&quot;</span><span class="p">,</span> <span class="s2">&quot;Close by&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;birth day&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0101&quot;</span><span class="p">,</span> <span class="s2">&quot;0102&quot;</span><span class="p">,</span> <span class="s2">&quot;0103&quot;</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">my_peers</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>distance to home</th>
+      <th>birth day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Michael Moon</td>
+      <td>Far, far, far away</td>
+      <td>0101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Karen Reid</td>
+      <td>Pretty far</td>
+      <td>0102</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chunjiang Li</td>
+      <td>Close by</td>
+      <td>0103</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="create-a-pandas-dataframe-from-a-csv-file">
@@ -958,11 +1624,183 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>pumfid</th>
+      <th>wght_per</th>
+      <th>survmnth</th>
+      <th>wtbs_001</th>
+      <th>agecxryg</th>
+      <th>agegr10</th>
+      <th>agehsdyc</th>
+      <th>ageprgrd</th>
+      <th>chh0014c</th>
+      <th>...</th>
+      <th>ree_02</th>
+      <th>ree_03</th>
+      <th>rlr_110</th>
+      <th>lan_01</th>
+      <th>lanhome</th>
+      <th>lanhmult</th>
+      <th>lanmt</th>
+      <th>lanmtmul</th>
+      <th>incg1</th>
+      <th>hhincg1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>10000</td>
+      <td>616.6740</td>
+      <td>7</td>
+      <td>305.1159</td>
+      <td>96</td>
+      <td>5</td>
+      <td>62</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>10001</td>
+      <td>8516.6140</td>
+      <td>7</td>
+      <td>0.0000</td>
+      <td>6</td>
+      <td>5</td>
+      <td>32</td>
+      <td>5</td>
+      <td>0</td>
+      <td>...</td>
+      <td>5</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>5</td>
+      <td>2</td>
+      <td>5</td>
+      <td>2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>10002</td>
+      <td>371.7520</td>
+      <td>1</td>
+      <td>362.7057</td>
+      <td>2</td>
+      <td>4</td>
+      <td>9</td>
+      <td>10</td>
+      <td>3</td>
+      <td>...</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>10003</td>
+      <td>1019.3135</td>
+      <td>3</td>
+      <td>0.0000</td>
+      <td>96</td>
+      <td>6</td>
+      <td>65</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>10004</td>
+      <td>1916.0708</td>
+      <td>9</td>
+      <td>11388.9706</td>
+      <td>96</td>
+      <td>2</td>
+      <td>25</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 350 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># size of your table</span>
 <span class="n">time_use_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(17390, 350)
 </pre></div>
 </div>
 </div>
@@ -979,11 +1817,21 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17390
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of columns</span>
 <span class="n">time_use_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>350
 </pre></div>
 </div>
 </div>
@@ -1023,6 +1871,70 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>luc_rst</th>
+      <th>chh0014c</th>
+      <th>gtu_110</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="rename-columns">
@@ -1038,6 +1950,11 @@ is <strong>NOT EQUAL</strong> to<br />
 <span class="n">subset_time_use_data_colnames</span> <span class="o">=</span> <span class="n">subset_time_use_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columnnames</span><span class="p">)</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="n">subset_time_use_data_colnames</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Participant ID&#39;, &#39;Urban/Rural&#39;, &#39;Kids under 14&#39;, &#39;Feeling Rushed&#39;]
 </pre></div>
 </div>
 </div>
@@ -1132,7 +2049,7 @@ is <strong>NOT EQUAL</strong> to<br />
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span> <span class="c1"># crate the Boolean variable</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span> <span class="o">=</span> <span class="n">urbanrural_col</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># crate the Boolean variable</span>
 </pre></div>
 </div>
 </div>
@@ -1141,6 +2058,16 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    True
+1    True
+2    True
+3    True
+4    True
+Name: Urban/Rural, dtype: bool
 </pre></div>
 </div>
 </div>
@@ -1165,6 +2092,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13319
+</pre></div>
+</div>
+</div>
 </div>
 <p>Select all the participants (rows) who live in urban areas in <code class="docutils literal notranslate"><span class="pre">subset_time_use_data_colnames</span></code> using the Boolean series <code class="docutils literal notranslate"><span class="pre">urban</span></code>.</p>
 <div class="cell docutils container">
@@ -1173,10 +2105,79 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>Urban/Rural</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset_time_use_data_colnames</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(17390, 4)
 </pre></div>
 </div>
 </div>
@@ -1191,7 +2192,12 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="n">urban</span><span class="p">]</span>
 
-<span class="n">urban_df</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">urban_df</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># we are left with 13 319 when we extract participants from &quot;urban&quot; areas only</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(13319, 4)
 </pre></div>
 </div>
 </div>
@@ -1203,6 +2209,16 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span><span class="p">[</span><span class="s2">&quot;Kids under 14&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kids under 14
+0    10514
+1     1268
+2     1168
+3      369
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1232,6 +2248,20 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Feeling Rushed
+1     3986
+2     3888
+3     1994
+6     1802
+4     1037
+5      562
+97      49
+98       1
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
       <span class="n">gtu_110</span>            <span class="n">General</span> <span class="n">time</span> <span class="n">use</span> <span class="o">-</span> <span class="n">Feel</span> <span class="n">rushed</span>
@@ -1258,6 +2288,13 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span><span class="p">[</span><span class="s2">&quot;Urban/Rural&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Urban/Rural
+1    13319
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1316,6 +2353,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1485
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now compute the proportion that feel rushed among those with at least one kid.</p>
 <div class="cell docutils container">
@@ -1323,6 +2365,11 @@ is <strong>NOT EQUAL</strong> to<br />
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prop_kids</span> <span class="o">=</span> <span class="n">Total_kids_rush</span> <span class="o">/</span> <span class="p">(</span><span class="n">Total_kids_norush</span> <span class="o">+</span> <span class="n">Total_kids_rush</span><span class="p">)</span>
 
 <span class="n">prop_kids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.94006734006734
 </pre></div>
 </div>
 </div>
@@ -1344,6 +2391,11 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6019056472228678
+</pre></div>
+</div>
+</div>
 </div>
 <p>Let’s multiply by 100 and round to decimal places to express as a percentage and print out an informative description of the statistic.</p>
 <div class="cell docutils container">
@@ -1355,6 +2407,12 @@ is <strong>NOT EQUAL</strong> to<br />
 <span class="nb">print</span><span class="p">(</span><span class="n">percent_kids</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">percent_nokids</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.01
+60.19
 </pre></div>
 </div>
 </div>
@@ -1380,6 +2438,17 @@ is <strong>NOT EQUAL</strong> to<br />
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The percentage of respondents with kids that feel rushed is 94.01%.
+
+
+The percentage of respondents with no kids that feel rushed is 60.19%.
+
+
+33.82% more respondents with kids feel rushed compared to respondents without kids.
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="did-we-answer-the-question">
@@ -1392,6 +2461,17 @@ is <strong>NOT EQUAL</strong> to<br />
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">kidstext</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">percent_nokids</span><span class="si">}</span><span class="s2">%.&quot;</span><span class="p">)</span> <span class="c1"># print interpretation of percent with no kids</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># add a blank line</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">percent_kids</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">percent_nokids</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">% </span><span class="si">{</span><span class="n">difftext</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The percentage of respondents with kids that feel rushed is 94.01%.
+
+
+The percentage of respondents with no kids that feel rushed is 60.19%.
+
+
+33.82% more respondents with kids feel rushed compared to respondents without kids.
 </pre></div>
 </div>
 </div>
@@ -1438,20 +2518,20 @@ is <strong>NOT EQUAL</strong> to<br />
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../../practice/sample_midterm/GGR274_Midterm.html"
+       href="Class4_GGR274_MM.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 midterm test (2025 Winter Practice)</p>
+        <p class="prev-next-title">Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling</p>
       </div>
     </a>
     <a class="right-next"
-       href="Class4_GGR274_MM_solution.html"
+       href="../lab/Lab_4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling</p>
+        <p class="prev-next-title">GGR274 Lab 4: Introduction to Data Wrangling, Part 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
