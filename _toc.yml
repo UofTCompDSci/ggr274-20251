@@ -31,6 +31,10 @@ parts:
       title: Prof. Li's Slides
     - file: weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
+    - file: weekly-materials/week04/lab/Lab_4.ipynb
+      title: Lab 4 Notebook
+    - file: weekly-materials/week04/homework/Homework_4.ipynb
+      title: Homework 4 Notebook
     - file: weekly-materials/week04/lecture/gss_tu2016_codebook.txt
       title: GSS TU 2016 Codebook
     - file: weekly-materials/week04/lecture/gss_tu2016_main_file.csv
