@@ -25,6 +25,11 @@ parts:
     - file: practice/sample_midterm/GGR274_Midterm.ipynb
       title: Midterm practice
 
+  - caption: Week 5
+    chapters:
+    - file: weekly-materials/week05/lecture/Class5_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+
   - caption: Week 4
     chapters:
     - url: https://q.utoronto.ca/courses/380232/files?preview=35904876
