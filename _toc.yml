@@ -22,6 +22,8 @@ parts:
 
   - caption: Midterm
     chapters:
+    - file: midterm/makeup/Midterm.ipynb
+      title: Midterm Makeup
     # - file: midterm/regular/Midterm.ipynb
     #   title: Midterm
     - file: practice/sample_midterm/GGR274_Midterm.ipynb
