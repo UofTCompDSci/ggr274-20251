@@ -20,6 +20,11 @@ parts:
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
 
+  - caption: Week 5
+    chapters:
+    - file: weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+
   - caption: Midterm
     chapters:
     # - file: midterm/makeup/Midterm.ipynb
