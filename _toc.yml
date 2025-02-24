@@ -19,7 +19,14 @@ parts:
       title: JupyterHub Guide
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
-
+      
+  - caption: Project
+    chapters:
+    - file: project/proposal/GGR274_Project_Proposal.ipynb
+      title: Project Proposal
+    - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
+      title: Project Instruction
+      
   - caption: Week 7
     chapters:
     - file: weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb
