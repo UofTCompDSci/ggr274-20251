@@ -33,6 +33,10 @@ parts:
       title: Prof. Moon's Notebook
     - url: https://q.utoronto.ca/courses/380232/files?preview=36409989
       title: Prof. Li's Slides
+    - file: weekly-materials/week07/lab/Lab_7.ipynb
+      title: Lab 7 Notebook
+    - file: weekly-materials/week07/homework/Homework_7.ipynb
+      title: Homework 7 Notebook
 
   - caption: Midterm
     chapters:
