@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lecture/Class7_GGR274_MM';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lecture/Class7_GGR274_MM_solution';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Class 6: Simulation and Law of Averages" href="Class7_GGR274_MM_solution.html" />
-    <link rel="prev" title="GGR274H1 Final Project Instructions" href="../../../project/presentation/GGR274_Final_Project_Instruction.html" />
+    <link rel="next" title="GGR274 Lab 7: Functions" href="../lab/Lab_7.html" />
+    <link rel="prev" title="Class 6: Simulation and Law of Averages" href="Class7_GGR274_MM.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,8 +192,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Class7_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook with Exercise Solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=36409989">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_7.html">Lab 7 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_7.html">Homework 7 Notebook</a></li>
@@ -292,7 +292,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/lecture/Class7_GGR274_MM_solution.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +323,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week07/lecture/Class7_GGR274_MM_solution.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -492,11 +492,24 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method randint in module random:
+
+randint(a, b) method of random.Random instance
+    Return random integer in range [a, b], including both end points.
+</pre></div>
+</div>
+</div>
 </div>
 <p>Here we call function <code class="docutils literal notranslate"><span class="pre">randint()</span></code>, asking for a number in the range <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
@@ -537,11 +550,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">roll_die</span></code> is also a Python variable. So … what is its value?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_die</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.roll_die()&gt;
 </pre></div>
 </div>
 </div>
@@ -552,10 +575,23 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function roll_die in module __main__:
+
+roll_die()
+    Simulate a die roll by returning a number between 1 and 6.
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">roll_die</span><span class="p">))</span> <span class="c1"># print out all the properties and methods of roll_die</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__kwdefaults__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__qualname__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
 </pre></div>
 </div>
 </div>
@@ -566,10 +602,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Simulate a die roll by returning a number between 1 and 6.
+    
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roll_die</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>roll_die
 </pre></div>
 </div>
 </div>
@@ -585,10 +632,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">waffles</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;roll_die&#39;
 </pre></div>
 </div>
 </div>
@@ -619,6 +676,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
 </div>
 <p>In this function call, we’re passing <code class="docutils literal notranslate"><span class="pre">20</span></code> in, and <code class="docutils literal notranslate"><span class="pre">num_sides</span></code> is a <em>temporary</em> name for that value.</p>
 </section>
@@ -628,6 +690,16 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">num_sides</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">num_sides</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;num_sides&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -668,7 +740,7 @@ document.write(`
 <span class="sd">    Arguments:</span>
 <span class="sd">        minute (float): time in minutes.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># complete the function here</span>
+    <span class="n">hour</span> <span class="o">=</span> <span class="n">minute</span> <span class="o">/</span> <span class="mi">60</span>
     <span class="k">return</span> <span class="n">hour</span>
 </pre></div>
 </div>
@@ -679,7 +751,53 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call your function here</span>
 <span class="n">change_min_to_hour</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">help</span><span class="p">(</span><span class="n">change_min_to_hour</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">change_min_to_hour</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">change_min_to_hour</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.008333333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">change_min_to_hour</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function change_min_to_hour in module __main__:
+
+change_min_to_hour(minute)
+    Change minutes to hours by dividing by 60.
+    
+    Arguments:
+        minute (float): time in minutes.
 </pre></div>
 </div>
 </div>
@@ -698,6 +816,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
+58
+32
+93
+</pre></div>
+</div>
+</div>
 </div>
 <p>Each <em>iteration</em> of the loop makes <code class="docutils literal notranslate"><span class="pre">minute</span></code> the name of the next number, in order from left to right.</p>
 <p>This works with any iterable, like <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
@@ -705,6 +831,16 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;GGR274&quot;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G
+G
+R
+2
+7
+4
 </pre></div>
 </div>
 </div>
@@ -723,6 +859,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_46576/1893467730.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p><strong>Goal:</strong> calculate the sum of the numbers using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (rather than calling <code class="docutils literal notranslate"><span class="pre">sum</span></code>).</p></li>
@@ -736,6 +884,16 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    30
+1    30
+2    30
+3    75
+4    15
+Name: persdur, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -744,11 +902,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># add first value in series to running_sum</span>
 <span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
 </pre></div>
 </div>
 </div>
@@ -763,6 +931,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -771,6 +944,11 @@ document.write(`
 
 <span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90
 </pre></div>
 </div>
 </div>
@@ -786,6 +964,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>165
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -795,6 +978,11 @@ document.write(`
 
 <span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 <span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>180
 </pre></div>
 </div>
 </div>
@@ -811,12 +999,17 @@ document.write(`
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>   <span class="c1"># star thte running sum at 0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running_sum</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># star thte running sum at 0</span>
 
 <span class="k">for</span> <span class="n">pdur</span> <span class="ow">in</span> <span class="n">persdur</span><span class="p">:</span> <span class="c1"># access the number</span>
-        <span class="c1"># add teh number to the running sum and store the sum</span>
+    <span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">pdur</span> <span class="c1"># add teh number to the running sum and store the sum</span>
 
 <span class="n">running_sum</span>   <span class="c1"># return the running sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>831829
 </pre></div>
 </div>
 </div>
@@ -843,9 +1036,23 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sum_number</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">sum_number</span><span class="p">)</span> 
 
 <span class="n">sum_number</span><span class="p">(</span><span class="n">persdur</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function sum_number in module __main__:
+
+sum_number(numbers)
+    Sum a list or pandas Series:
+    
+    Arguments:
+        numbers (list, Series, or column of a DataFrame): numbers to sum up
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>831829
 </pre></div>
 </div>
 </div>
@@ -864,12 +1071,29 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">range(stop)</span></code> returns a sequence of numbers starting from 0 to <code class="docutils literal notranslate"><span class="pre">stop-1</span></code> increasing by <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
 </pre></div>
 </div>
 </div>
@@ -914,6 +1138,34 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You are rolling a 6-sided die 5 times!  Good luck.
+
+This is roll number: 1
+Value of die on this roll is: 4
+Running total so far is: 4 
+
+This is roll number: 2
+Value of die on this roll is: 6
+Running total so far is: 10 
+
+This is roll number: 3
+Value of die on this roll is: 3
+Running total so far is: 13 
+
+This is roll number: 4
+Value of die on this roll is: 2
+Running total so far is: 15 
+
+This is roll number: 5
+Value of die on this roll is: 2
+Running total so far is: 17 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="question">
@@ -950,6 +1202,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5, 6])
+</pre></div>
+</div>
+</div>
 </div>
 <blockquote>
 <div><p>This returns a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array which is a different python object. It is also iterable.</p>
@@ -958,6 +1215,11 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5, 6])
 </pre></div>
 </div>
 </div>
@@ -972,6 +1234,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    2
+2    3
+3    4
+4    5
+5    6
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Now, we can use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">sample()</span></code> function to take a random <em>sample</em> of <code class="docutils literal notranslate"><span class="pre">die</span></code>.</p></li>
@@ -980,6 +1253,12 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2    3
+dtype: int64
 </pre></div>
 </div>
 </div>
@@ -997,6 +1276,32 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/ggr274/lib/python3.10/site-packages/pandas/core/generic.py:6112,</span> in <span class="ni">NDFrame.sample</span><span class="nt">(self, n, frac, replace, weights, random_state, axis, ignore_index)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6109</span> <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6110</span>     <span class="n">weights</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">preprocess_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">6112</span> <span class="n">sampled_indices</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">obj_len</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">rs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6113</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">sampled_indices</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6115</span> <span class="k">if</span> <span class="n">ignore_index</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/envs/ggr274/lib/python3.10/site-packages/pandas/core/sample.py:152,</span> in <span class="ni">sample</span><span class="nt">(obj_len, size, replace, weights, random_state)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid weights: weights sum to zero&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">152</span> <span class="k">return</span> <span class="n">random_state</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">obj_len</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">replace</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="p">)</span>
+
+<span class="nn">File numpy/random/mtrand.pyx:1001,</span> in <span class="ni">numpy.random.mtrand.RandomState.choice</span><span class="nt">()</span>
+
+<span class="ne">ValueError</span>: Cannot take a larger sample than population when &#39;replace=False&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>… and the <code class="docutils literal notranslate"><span class="pre">replace</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">sample()</span></code>.</p></li>
@@ -1011,15 +1316,44 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4    5
+3    4
+2    3
+0    1
+5    6
+5    6
+1    2
+4    5
+3    4
+5    6
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can achieve the same simulation without using <code class="docutils literal notranslate"><span class="pre">pandas</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using base python random.choice</span>
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die</span><span class="p">)</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die</span><span class="p">)</span> <span class="c1"># equivalent to `die.sample(1)`</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">)</span>
     
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+6
+2
+5
+3
+5
+3
+1
+5
+2
 </pre></div>
 </div>
 </div>
@@ -1035,7 +1369,7 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mf">6.6</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># equivalen to `np.array([0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5])``</span>
 </pre></div>
 </div>
 </div>
@@ -1049,6 +1383,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_10</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cadetblue&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/f05c1b2c76e3971755dafaedfc78d814bbf6829862f54e8692960120f9fcc6e7.png" src="../../../_images/f05c1b2c76e3971755dafaedfc78d814bbf6829862f54e8692960120f9fcc6e7.png" />
 </div>
 </div>
 <blockquote>
@@ -1064,6 +1401,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <span class="n">roll_10000</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;coral&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;coral&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/93c0059c1f879f55388e7fc46129edf1556da98b5f656fb04c142e5591874564.png" src="../../../_images/93c0059c1f879f55388e7fc46129edf1556da98b5f656fb04c142e5591874564.png" />
 </div>
 </div>
 </section>
@@ -1088,6 +1428,12 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Die value&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/7d232dea9d93d480749ebd17603298f475e362f948a75beb72a700c3c20a71dd.png" src="../../../_images/7d232dea9d93d480749ebd17603298f475e362f948a75beb72a700c3c20a71dd.png" />
+</div>
 </div>
 </section>
 <section id="probability">
@@ -1100,6 +1446,17 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_10000</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">roll_10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5    0.1688
+4    0.1680
+1    0.1673
+3    0.1671
+2    0.1657
+6    0.1631
+Name: count, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1152,6 +1509,15 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <span class="n">empirical_hist</span><span class="p">(</span><span class="n">roll_die</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1    0.5
+2    0.3
+3    0.2
+Name: count, dtype: float64
+</pre></div>
+</div>
+<img alt="../../../_images/9805003308c435a9c4ca36f55282adb362abb15b1d7ef6a1adf5c4cb47314503.png" src="../../../_images/9805003308c435a9c4ca36f55282adb362abb15b1d7ef6a1adf5c4cb47314503.png" />
 </div>
 </div>
 </section>
@@ -1221,6 +1587,67 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(17390, 3)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>persdur</th>
+      <th>luc_rst</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>30</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>30</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>30</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>75</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>15</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Transform time spent on personal activities from minutes to hours, and add this new column called <code class="docutils literal notranslate"><span class="pre">'persdur_hour'</span></code> to <code class="docutils literal notranslate"><span class="pre">timeuse_subset</span></code>.</p>
 <div class="cell docutils container">
@@ -1231,11 +1658,88 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>persdur</th>
+      <th>luc_rst</th>
+      <th>persdur_hour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>30</td>
+      <td>1</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>30</td>
+      <td>1</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>30</td>
+      <td>1</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>75</td>
+      <td>1</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>15</td>
+      <td>1</td>
+      <td>0.25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Compute a summary of the distribution of <code class="docutils literal notranslate"><span class="pre">'persdur_hour'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s2">&quot;persdur_hour&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    17390.000000
+mean         0.797229
+std          0.900105
+min          0.000000
+25%          0.250000
+50%          0.583333
+75%          1.000000
+max         15.083333
+Name: persdur_hour, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1249,6 +1753,91 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>persdur</th>
+      <th>luc_rst</th>
+      <th>persdur_hour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>13004.000000</td>
+      <td>13004.000000</td>
+      <td>13004.000000</td>
+      <td>13004.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>18669.473624</td>
+      <td>55.479314</td>
+      <td>1.248693</td>
+      <td>0.924655</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>5032.139991</td>
+      <td>33.644386</td>
+      <td>0.494974</td>
+      <td>0.560740</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>10000.000000</td>
+      <td>15.000000</td>
+      <td>1.000000</td>
+      <td>0.250000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>14294.750000</td>
+      <td>30.000000</td>
+      <td>1.000000</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>18675.500000</td>
+      <td>45.000000</td>
+      <td>1.000000</td>
+      <td>0.750000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>23010.500000</td>
+      <td>70.000000</td>
+      <td>1.000000</td>
+      <td>1.166667</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>27389.000000</td>
+      <td>180.000000</td>
+      <td>3.000000</td>
+      <td>3.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="empirical-distribution-of-the-sample">
@@ -1265,6 +1854,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/243778cb3bdb42e82a676d33ebf5a0b5451844a4225d19f6a8fcffe0ffa15728.png" src="../../../_images/243778cb3bdb42e82a676d33ebf5a0b5451844a4225d19f6a8fcffe0ffa15728.png" />
+</div>
 </div>
 <p>A random sample of 10 …</p>
 <div class="cell docutils container">
@@ -1275,6 +1867,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
     <span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/5565160b6938b1362a8d1125bf7d9921b492ad14bb338bcf52d55856edfca80a.png" src="../../../_images/5565160b6938b1362a8d1125bf7d9921b492ad14bb338bcf52d55856edfca80a.png" />
 </div>
 </div>
 <p>A random sample of 100 …</p>
@@ -1287,6 +1882,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/be06cff7dd3347c5e9bf43a527c476234a2b94d72eac60529cfe07942033f4b1.png" src="../../../_images/be06cff7dd3347c5e9bf43a527c476234a2b94d72eac60529cfe07942033f4b1.png" />
+</div>
 </div>
 <p>A random sample of 1000 …</p>
 <div class="cell docutils container">
@@ -1297,6 +1895,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
     <span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/e14db0ebaefe61c240fa982ec7cd78f9d377a1c765b93df3e882d9f52b1bdcd4.png" src="../../../_images/e14db0ebaefe61c240fa982ec7cd78f9d377a1c765b93df3e882d9f52b1bdcd4.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1311,6 +1912,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">.5</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/9e016f236e46b6032b5178f989775c60e26863326289de2a46c2c0b5dfb99eb9.png" src="../../../_images/9e016f236e46b6032b5178f989775c60e26863326289de2a46c2c0b5dfb99eb9.png" />
 </div>
 </div>
 </section>
@@ -1333,6 +1937,9 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/243778cb3bdb42e82a676d33ebf5a0b5451844a4225d19f6a8fcffe0ffa15728.png" src="../../../_images/243778cb3bdb42e82a676d33ebf5a0b5451844a4225d19f6a8fcffe0ffa15728.png" />
+</div>
 </div>
 </section>
 <section id="id1">
@@ -1352,6 +1959,11 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.75
 </pre></div>
 </div>
 </div>
@@ -1376,6 +1988,11 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.75
+</pre></div>
+</div>
+</div>
 </div>
 <p>Our sample – one set of 100 people – gave us one observed value of the statistic. This raises an important problem of inference:</p>
 <p><strong>The statistic could have been different.</strong></p>
@@ -1383,6 +2000,11 @@ since we will be working in <code class="docutils literal notranslate"><span cla
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 </pre></div>
 </div>
 </div>
@@ -1428,6 +2050,11 @@ A histogram of those values will tell us about the <strong>distribution of the s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6666666666666666
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>Step 3: Decide how many simulated values to generate.</strong> Let’s do 5,000 repetitions.</p>
 <p><strong>Step 4: Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to generate a list of simulated values.</strong> Start by creating an empty list in which to collect our results. We will then set up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop for generating all the simulated values. The body of the loop will consist of generating one simulated value of the sample median, and appending it to our collection list.</p>
@@ -1453,6 +2080,11 @@ A histogram of those values will tell us about the <strong>distribution of the s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.75]
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>Run the cell above several times and you will see that values keep getting appended to <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
@@ -1465,6 +2097,7 @@ A histogram of those values will tell us about the <strong>distribution of the s
 <span class="n">num_sims</span> <span class="o">=</span> <span class="mi">5000</span> 
 
 <span class="c1"># how do we tell Python we want to run `num_sim` times?</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_sims</span><span class="p">):</span>
     <span class="n">sim_medians</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_sample_median</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -1478,6 +2111,19 @@ A histogram of those values will tell us about the <strong>distribution of the s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    5000.000000
+mean        0.801642
+std         0.082766
+min         0.500000
+25%         0.750000
+50%         0.750000
+75%         0.833333
+max         1.000000
+dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1499,6 +2145,9 @@ A histogram of those values will tell us about the <strong>distribution of the s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/436de5a1b8c0aa1a6e44c9e13302f49b92585be1766310dfb62ffa5ca9432a8c.png" src="../../../_images/436de5a1b8c0aa1a6e44c9e13302f49b92585be1766310dfb62ffa5ca9432a8c.png" />
+</div>
 </div>
 <p>The exact counts of medians in each interval can be examined using <code class="docutils literal notranslate"><span class="pre">pd.cut</span></code> and <code class="docutils literal notranslate"><span class="pre">value_counts</span></code>.</p>
 <div class="cell docutils container">
@@ -1511,6 +2160,26 @@ A histogram of those values will tell us about the <strong>distribution of the s
 
 <span class="c1"># relative frequency (proportion) of values in each bin</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sim_means_series</span><span class="p">,</span> <span class="n">median_bins</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">/</span> <span class="n">num_sims</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.7, 0.8]    2646
+(0.8, 0.9]    1325
+(0.9, 1.0]     447
+(1.0, 1.1]     295
+(0.6, 0.7]     272
+(0.5, 0.6]      11
+Name: count, dtype: int64
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.7, 0.8]    0.5292
+(0.8, 0.9]    0.2650
+(0.9, 1.0]    0.0894
+(1.0, 1.1]    0.0590
+(0.6, 0.7]    0.0544
+(0.5, 0.6]    0.0022
+Name: count, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1589,20 +2258,20 @@ A histogram of those values will tell us about the <strong>distribution of the s
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../../project/presentation/GGR274_Final_Project_Instruction.html"
+       href="Class7_GGR274_MM.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274H1 Final Project Instructions</p>
+        <p class="prev-next-title">Class 6: Simulation and Law of Averages</p>
       </div>
     </a>
     <a class="right-next"
-       href="Class7_GGR274_MM_solution.html"
+       href="../lab/Lab_7.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class 6: Simulation and Law of Averages</p>
+        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
