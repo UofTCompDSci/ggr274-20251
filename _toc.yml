@@ -26,7 +26,12 @@ parts:
       title: Project Proposal
     - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
       title: Project Instruction
-      
+
+  - caption: Week 8
+    chapters:
+    - file: weekly-materials/week08/lecture/Class8_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+
   - caption: Week 7
     chapters:
     - file: weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb
