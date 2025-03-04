@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/homework/Homework_7';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/homework/Homework_7_solution';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GG274 Homework 7: Summary Statistics, Histograms and Simulation" href="Homework_7_solution.html" />
-    <link rel="prev" title="GGR274 Lab 7: Functions" href="../lab/Lab_7_solutions.html" />
+    <link rel="next" title="GGR274 midterm test (2025 Winter Practice)" href="../../../practice/sample_midterm/GGR274_Midterm.html" />
+    <link rel="prev" title="GG274 Homework 7: Summary Statistics, Histograms and Simulation" href="Homework_7.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -203,8 +203,8 @@
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=36409989">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_7.html">Lab 7 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_7_solutions.html">Lab 7 Solution</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 7 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework_7_solution.html">Homework 7 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework_7.html">Homework 7 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 7 Solution</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
 <ul class="nav bd-sidenav">
@@ -304,7 +304,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/homework/Homework_7.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/homework/Homework_7_solution.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week07/homework/Homework_7.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week07/homework/Homework_7_solution.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -511,15 +511,25 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Create the following pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>: the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> created by reading the <code class="docutils literal notranslate"><span class="pre">gss_tu2016_week7.csv</span></code> file. <strong>(1 mark)</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code>: the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> containing the following columns from <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>: <code class="docutils literal notranslate"><span class="pre">CASEID</span></code>, <code class="docutils literal notranslate"><span class="pre">dur18</span></code>. <strong>(1 mark)</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code>: the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> containing the following columns from <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>: <code class="docutils literal notranslate"><span class="pre">CASEID</span></code>, <code class="docutils literal notranslate"><span class="pre">dur18</span></code>. <strong>(1 mark)</strong> (We test this after any changes are made to it. We do not check the initial value.)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution, delete to create handout</span>
 
-<span class="c1"># add your code below</span>
+
+<span class="n">time_use_data_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;gss_tu2016_week7.csv&quot;</span><span class="p">)</span>
+
+<span class="n">time_use_dur</span> <span class="o">=</span> <span class="n">time_use_data_raw</span><span class="p">[[</span><span class="s2">&quot;CASEID&quot;</span><span class="p">,</span> <span class="s2">&quot;dur18&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -535,14 +545,108 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution, delete to create handout</span>
+<span class="n">new_column_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;CASEID&quot;</span><span class="p">:</span> <span class="s2">&quot;participant_id&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dur18&quot;</span><span class="p">:</span> <span class="s2">&quot;time_spent_cleaning&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">time_use_data</span> <span class="o">=</span> <span class="n">time_use_dur</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">time_use_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_column_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">time_use_data</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>participant_id</th>
+      <th>time_spent_cleaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17385</th>
+      <td>27385</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17386</th>
+      <td>27386</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>27387</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>17388</th>
+      <td>27388</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>17389</th>
+      <td>27389</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table>
+<p>17390 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 2 check that you have the correct column names</span>
+<span class="c1"># leave this for students to check work</span>
 
 <span class="n">expected_columnnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;participant_id&quot;</span><span class="p">,</span> <span class="s2">&quot;time_spent_cleaning&quot;</span><span class="p">]</span>
 
@@ -551,6 +655,11 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column names are correct!&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something is wrong, check your column names&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column names are correct!
 </pre></div>
 </div>
 </div>
@@ -567,7 +676,24 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_nonzero</span> <span class="o">=</span> <span class="n">time_use_data</span><span class="p">[</span><span class="n">time_use_data</span><span class="p">[</span><span class="s2">&quot;time_spent_cleaning&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">][</span><span class="s2">&quot;time_spent_cleaning&quot;</span><span class="p">]</span>
+
+<span class="n">summary_stats</span> <span class="o">=</span> <span class="n">clean_nonzero</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="n">summary_stats</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    7154.000000
+mean       91.095192
+std        94.963051
+min         5.000000
+25%        30.000000
+50%        60.000000
+75%       120.000000
+max       855.000000
+Name: time_spent_cleaning, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -583,10 +709,22 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Label the horizontal axis (x-axis) <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">spent</span> <span class="pre">cleaning</span> <span class="pre">(minutes)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="c1"># DO NOT CHANGE THIS LINE</span>
-<span class="c1"># Add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution</span>
+<span class="n">time_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">clean_nonzero</span><span class="p">,</span> 
+    <span class="n">bins</span><span class="o">=</span><span class="n">time_bins</span><span class="p">,</span> 
+    <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">1.3</span><span class="p">,</span> 
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time spent cleaning (minutes)&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/0ec22c67e64ee65f7a3c162e0a30afe7b077c0734b1616886dd9d68b84160345.png" src="../../../_images/0ec22c67e64ee65f7a3c162e0a30afe7b077c0734b1616886dd9d68b84160345.png" />
 </div>
 </div>
 </section>
@@ -596,7 +734,10 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Are there any strange values? Specifically, does it make sense that there are more people that spend less/more than 30 minutes cleaning in a day than those who spend more than 4 hours? Briefly explain.
 <strong>(2 marks)</strong></p>
 <blockquote>
-<div><p><strong>Answer here:</strong></p>
+<div><p>From the histogram, you can tell that the data is <strong>right-skewed</strong> (or a decreasing shape; you don’t need to use the exact term), ranges between 0 and just above 800, centred around the lower end (0~200), etc.</p>
+<p>There is a large number of values in the first bar which starts at 0 minute and ends at 30 minutes. It’s not surprising that there are more people who spend less than 30 minutes than those who spend more than 4 hours. What’s suprising is that there are a few who spend more than 10 hours cleaning indoors.</p>
+<p>Or one may argue that it’s surprising to see there are so many people who don’t spend much time cleaning their home indoors. Perhaps, they were cleaning while doing other activities and didn’t indicate their cleaning activity.</p>
+<p>Any reasonable explanation based on the context would be acceptable.</p>
 </div></blockquote>
 </section>
 </section>
@@ -606,7 +747,15 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Compute the empirical mean time spent cleaning by respondents and name it <code class="docutils literal notranslate"><span class="pre">empirical_mean_time_spent_cleaning</span></code>. <strong>(1 mark)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution, delete to create handout</span>
+<span class="n">empirical_mean_time_spent_cleaning</span> <span class="o">=</span> <span class="n">clean_nonzero</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">empirical_mean_time_spent_cleaning</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91.09519150125804
 </pre></div>
 </div>
 </div>
@@ -621,7 +770,8 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Create a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array named <code class="docutils literal notranslate"><span class="pre">sample_sizes</span></code> with the aforementioned values in the specified order using <code class="docutils literal notranslate"><span class="pre">np.array()</span></code>. <strong>(1 mark)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution</span>
+<span class="n">sample_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -641,12 +791,10 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <em>Hint: Initialize an empty list used to store the sample means. Inside your for loop generate a sample from the data, calculate the sample mean, and append it to your list.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finish the function header and complete the function body.</span>
-<span class="c1"># </span>
-<span class="k">def</span><span class="w"> </span><span class="o">&lt;</span><span class="n">replace</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">function</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution, delete to create handout</span>
 
+<span class="k">def</span><span class="w"> </span><span class="nf">simulate_sample_means</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Return a list of 100 sample means from a sample of size N from data.&#39;&#39;&#39;</span>
-    
     
     <span class="c1"># This next statement is for reproducability: each random number is generated</span>
     <span class="c1"># mathematically based on the previous random number, and we can say which</span>
@@ -655,34 +803,136 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
     <span class="n">seed</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="c1"># Here, create any variables that needs to be updated inside the loop.</span>
-
+    <span class="n">sample_means</span> <span class="o">=</span> <span class="p">[]</span>
     
-    <span class="c1"># In the next few lines, we will write a for loop to:</span>
-    <span class="c1"># - generate a sample of size N and compute sample mean.</span>
-    <span class="c1"># - append the sample mean to the list of sample means.</span>
+    <span class="c1"># generate a sample of size N and compute sample mean.</span>
+    <span class="c1"># append the sample mean to the list of sample means.</span>
     <span class="c1"># repeat 100 times.</span>
-
+    
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
         <span class="n">seed</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Don&#39;t change this line</span>
-        
         
         <span class="c1"># Here, write code to:</span>
         <span class="c1"># 1) Take a sample of data, and calculate the sample mean.</span>
         <span class="c1">#    When you call .sample, make sure you use random_state=seed as one of the</span>
         <span class="c1">#    arguments.</span>
         <span class="c1"># 2) Append the sample mean to the list of sample means.</span>
+        <span class="n">sample_mean</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
         
+        <span class="n">sample_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_mean</span><span class="p">)</span>
         
-         
-    <span class="k">return</span> <span class="o">&lt;</span><span class="n">replace</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">your</span><span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="n">variable</span><span class="o">&gt;</span>
+    <span class="k">return</span> <span class="n">sample_means</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check your work</span>
-<span class="n">simulate_sample_means</span><span class="p">(</span><span class="n">clean_nonzero</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulate_sample_means</span><span class="p">(</span><span class="n">clean_nonzero</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[102.0,
+ 103.0,
+ 70.0,
+ 53.0,
+ 200.0,
+ 47.0,
+ 140.0,
+ 106.0,
+ 77.0,
+ 46.0,
+ 70.0,
+ 159.0,
+ 84.0,
+ 52.0,
+ 49.0,
+ 93.0,
+ 82.0,
+ 33.0,
+ 68.0,
+ 108.0,
+ 42.0,
+ 63.0,
+ 49.0,
+ 58.0,
+ 126.0,
+ 83.0,
+ 163.0,
+ 41.0,
+ 79.0,
+ 133.0,
+ 70.0,
+ 45.0,
+ 147.0,
+ 90.0,
+ 37.0,
+ 62.0,
+ 67.0,
+ 154.0,
+ 34.0,
+ 90.0,
+ 62.0,
+ 46.0,
+ 94.0,
+ 61.0,
+ 27.0,
+ 71.0,
+ 60.0,
+ 108.0,
+ 68.0,
+ 41.0,
+ 93.0,
+ 34.0,
+ 23.0,
+ 209.0,
+ 65.0,
+ 66.0,
+ 111.0,
+ 65.0,
+ 130.0,
+ 98.0,
+ 68.0,
+ 86.0,
+ 174.0,
+ 139.0,
+ 53.0,
+ 72.0,
+ 53.0,
+ 63.0,
+ 75.0,
+ 89.0,
+ 55.0,
+ 117.0,
+ 73.0,
+ 53.0,
+ 115.0,
+ 204.0,
+ 163.0,
+ 42.0,
+ 57.0,
+ 56.0,
+ 62.0,
+ 46.0,
+ 133.0,
+ 113.0,
+ 92.0,
+ 32.0,
+ 63.0,
+ 60.0,
+ 60.0,
+ 106.0,
+ 200.0,
+ 45.0,
+ 104.0,
+ 100.0,
+ 165.0,
+ 51.0,
+ 45.0,
+ 63.0,
+ 67.8,
+ 124.0]
 </pre></div>
 </div>
 </div>
@@ -705,6 +955,11 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;value1&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -713,11 +968,21 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;value1&#39;, &#39;key2&#39;: &#39;value2&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;new_value&quot;</span>
 <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;new_value&#39;, &#39;key2&#39;: &#39;value2&#39;}
 </pre></div>
 </div>
 </div>
@@ -733,6 +998,15 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ibrahim&#39;: &#39;GGR274&#39;,
+ &#39;Adrienne&#39;: &#39;GGR274&#39;,
+ &#39;Asana&#39;: &#39;GGR274&#39;,
+ &#39;Yifeng&#39;: &#39;GGR274&#39;,
+ &#39;Yongxin&#39;: &#39;GGR274&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -743,11 +1017,27 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ibrahim&#39;: &#39;GGR274&#39;,
+ &#39;Adrienne&#39;: &#39;GGR274&#39;,
+ &#39;Asana&#39;: &#39;GGR274&#39;,
+ &#39;Yifeng&#39;: &#39;GGR274&#39;,
+ &#39;Yongxin&#39;: &#39;GGR274&#39;,
+ &#39;Meng&#39;: &#39;EEB125&#39;,
+ &#39;Alan&#39;: &#39;EEB125&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use &quot;key&quot; to access the associated value</span>
 <span class="n">ta_to_course</span><span class="p">[</span><span class="s2">&quot;Meng&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;EEB125&#39;
 </pre></div>
 </div>
 </div>
@@ -763,13 +1053,17 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fill in your code below</span>
-<span class="c1"># Start with an empty dictionary</span>
-<span class="n">all_sample_means_by_sample_size</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample solution</span>
 
-<span class="c1"># # Finish the code</span>
+<span class="n">all_sample_means_by_sample_size</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="k">for</span> <span class="o">...</span> 
+<span class="k">for</span> <span class="n">sample_size</span> <span class="ow">in</span> <span class="n">sample_sizes</span><span class="p">:</span>
+        
+    <span class="n">mean_at_sample_mean</span> <span class="o">=</span> <span class="n">simulate_sample_means</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">clean_nonzero</span><span class="p">,</span> 
+        <span class="n">N</span><span class="o">=</span><span class="n">sample_size</span><span class="p">)</span>
+        
+    <span class="n">all_sample_means_by_sample_size</span><span class="p">[</span><span class="n">sample_size</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_at_sample_mean</span>
 </pre></div>
 </div>
 </div>
@@ -790,9 +1084,15 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([5, 10, 20, 50, 100, 200, 500, 1000])
+dict_values([[102.0, 103.0, 70.0, 53.0, 200.0, 47.0, 140.0, 106.0, 77.0, 46.0, 70.0, 159.0, 84.0, 52.0, 49.0, 93.0, 82.0, 33.0, 68.0, 108.0, 42.0, 63.0, 49.0, 58.0, 126.0, 83.0, 163.0, 41.0, 79.0, 133.0, 70.0, 45.0, 147.0, 90.0, 37.0, 62.0, 67.0, 154.0, 34.0, 90.0, 62.0, 46.0, 94.0, 61.0, 27.0, 71.0, 60.0, 108.0, 68.0, 41.0, 93.0, 34.0, 23.0, 209.0, 65.0, 66.0, 111.0, 65.0, 130.0, 98.0, 68.0, 86.0, 174.0, 139.0, 53.0, 72.0, 53.0, 63.0, 75.0, 89.0, 55.0, 117.0, 73.0, 53.0, 115.0, 204.0, 163.0, 42.0, 57.0, 56.0, 62.0, 46.0, 133.0, 113.0, 92.0, 32.0, 63.0, 60.0, 60.0, 106.0, 200.0, 45.0, 104.0, 100.0, 165.0, 51.0, 45.0, 63.0, 67.8, 124.0], [123.5, 99.0, 74.5, 65.5, 130.0, 72.0, 112.0, 84.0, 88.5, 70.5, 62.0, 128.5, 100.5, 96.5, 92.0, 73.0, 90.5, 47.0, 106.0, 82.5, 41.0, 83.5, 69.5, 55.5, 102.0, 140.0, 162.0, 68.0, 72.0, 130.0, 63.5, 83.5, 113.0, 113.0, 62.0, 101.0, 68.0, 126.0, 109.0, 69.0, 107.0, 86.0, 87.5, 89.5, 69.0, 69.0, 57.0, 93.0, 56.0, 52.0, 72.5, 55.5, 52.0, 168.5, 70.5, 105.5, 95.5, 53.5, 123.0, 75.0, 106.0, 64.0, 110.5, 96.5, 49.5, 113.5, 107.5, 62.0, 78.0, 153.0, 95.5, 80.5, 74.5, 58.0, 125.0, 146.0, 104.5, 79.5, 70.5, 40.0, 96.5, 63.5, 109.0, 157.5, 100.0, 57.5, 62.5, 89.5, 76.0, 93.5, 138.0, 68.0, 70.5, 94.0, 115.5, 47.5, 69.5, 70.5, 87.4, 70.5], [106.75, 84.75, 86.25, 80.0, 97.0, 95.75, 124.5, 96.75, 74.0, 49.5, 65.25, 119.5, 78.75, 88.0, 75.25, 81.0, 76.25, 60.5, 112.25, 95.0, 54.5, 74.75, 116.75, 94.25, 74.0, 111.0, 125.0, 92.25, 55.0, 117.25, 71.0, 86.5, 111.05, 109.5, 84.25, 89.5, 78.75, 125.0, 147.5, 95.75, 109.25, 86.25, 67.0, 65.25, 73.25, 89.75, 95.5, 90.5, 80.5, 69.0, 89.25, 74.0, 87.25, 118.5, 94.5, 87.75, 80.5, 86.25, 117.5, 58.75, 87.25, 55.25, 94.5, 96.25, 106.75, 107.25, 78.75, 102.0, 119.0, 107.5, 122.0, 104.75, 129.0, 57.25, 88.25, 132.25, 81.25, 85.0, 64.75, 58.25, 104.75, 90.0, 112.0, 155.0, 94.75, 103.75, 93.5, 99.5, 89.5, 92.75, 147.0, 72.0, 73.0, 115.75, 97.5, 73.75, 92.75, 77.5, 114.95, 79.5], [100.5, 76.0, 114.7, 94.0, 87.8, 90.6, 110.8, 83.5, 88.7, 74.8, 107.8, 97.9, 98.4, 110.2, 81.1, 93.5, 71.1, 60.2, 103.8, 139.5, 77.0, 84.22, 108.8, 95.5, 70.4, 127.5, 96.5, 97.6, 72.8, 103.9, 81.3, 74.0, 88.42, 98.9, 80.3, 112.4, 110.2, 112.7, 132.8, 95.5, 96.4, 90.7, 84.0, 68.3, 74.1, 83.3, 108.4, 92.52, 80.7, 82.4, 92.7, 99.2, 83.8, 91.8, 78.7, 95.5, 74.4, 82.6, 92.6, 70.2, 78.1, 68.6, 103.4, 101.4, 92.3, 90.9, 91.8, 94.8, 94.9, 98.1, 118.3, 96.4, 107.1, 71.0, 99.2, 101.9, 91.3, 89.2, 83.6, 72.9, 87.5, 95.1, 100.6, 118.3, 85.1, 90.5, 94.7, 101.7, 83.4, 99.8, 112.4, 74.2, 81.4, 102.4, 83.4, 71.6, 109.8, 79.4, 119.88, 80.2], [91.5, 68.0, 105.4, 93.5, 99.5, 89.25, 99.55, 77.45, 87.35, 81.05, 93.25, 88.55, 89.5, 94.3, 83.6, 85.75, 78.95, 82.55, 106.4, 110.4, 73.7, 86.36, 89.3, 91.25, 90.5, 105.15, 101.45, 98.9, 81.8, 110.65, 85.65, 90.35, 86.86, 96.1, 76.95, 96.45, 92.8, 100.15, 114.7, 107.45, 83.4, 104.45, 85.85, 71.85, 75.05, 88.25, 97.6, 95.56, 79.65, 87.9, 102.65, 85.25, 89.9, 98.9, 86.61, 88.25, 79.7, 81.7, 86.1, 87.45, 73.6, 83.85, 97.2, 93.95, 87.6, 96.1, 94.35, 87.4, 97.4, 98.75, 107.1, 97.4, 100.05, 90.8, 97.3, 111.45, 90.55, 83.15, 95.0, 76.25, 74.95, 95.2, 94.1, 99.35, 83.0, 97.95, 88.85, 92.9, 91.5, 100.7, 99.45, 91.15, 85.8, 90.45, 99.5, 82.1, 103.45, 88.15, 101.14, 92.8], [89.25, 86.075, 93.025, 89.675, 89.125, 84.8, 94.6, 81.575, 92.2, 89.55, 91.475, 91.645, 82.55, 87.85, 88.2, 83.175, 92.85, 83.025, 96.225, 99.5, 79.325, 93.405, 87.05, 86.675, 89.375, 102.575, 96.6, 95.65, 80.75, 96.975, 92.3, 88.275, 85.43, 103.075, 84.525, 93.7, 95.425, 91.9, 107.05, 109.75, 89.5, 103.605, 92.025, 80.3, 84.5, 92.2, 95.55, 101.755, 92.85, 91.125, 101.275, 88.225, 92.675, 96.5, 82.18, 89.8, 77.1, 88.0, 88.525, 87.675, 87.35, 81.775, 93.85, 100.375, 92.975, 86.25, 93.825, 92.775, 106.075, 91.95, 102.125, 102.48, 102.2, 88.425, 93.225, 97.45, 93.025, 91.05, 92.6, 76.15, 82.225, 95.55, 87.15, 93.725, 87.95, 88.6, 87.75, 93.025, 91.45, 97.05, 92.8, 92.025, 80.35, 91.15, 91.7, 85.395, 93.6, 93.425, 85.645, 89.975], [86.88, 92.79, 92.27, 86.602, 94.46, 83.59, 92.448, 87.03, 95.9, 90.64, 88.452, 93.238, 86.26, 92.238, 87.18, 87.46, 91.158, 90.58, 101.17, 97.11, 87.77, 93.262, 86.61, 88.78, 89.218, 100.34, 93.31, 92.87, 81.5, 88.47, 92.01, 87.37, 91.55, 97.82, 89.76, 95.41, 92.67, 94.54, 94.11, 94.35, 90.98, 93.372, 86.552, 81.44, 89.34, 95.93, 91.37, 98.242, 88.7, 93.69, 91.17, 90.9, 95.422, 89.12, 85.582, 89.47, 84.21, 91.51, 92.19, 91.18, 90.11, 89.032, 92.09, 101.65, 93.29, 87.74, 92.56, 92.45, 101.02, 87.78, 95.92, 100.672, 97.22, 88.738, 98.05, 90.92, 96.79, 90.93, 93.082, 83.79, 86.75, 92.37, 81.95, 88.56, 87.63, 93.18, 82.22, 94.21, 89.18, 92.928, 90.92, 90.348, 88.26, 91.14, 87.38, 85.828, 92.3, 92.11, 91.12, 88.41], [93.335, 94.24, 92.92, 91.286, 94.991, 86.45, 90.37, 91.715, 92.1, 91.18, 87.531, 93.721, 89.125, 93.219, 88.89, 89.244, 92.129, 90.03, 99.355, 93.94, 89.585, 88.137, 88.919, 91.124, 93.135, 95.69, 95.874, 87.955, 88.104, 90.95, 92.646, 90.005, 90.35, 97.205, 91.32, 94.265, 90.84, 93.3, 91.444, 89.671, 88.665, 93.276, 85.049, 84.0, 88.304, 92.945, 89.134, 91.511, 89.12, 92.194, 89.95, 90.366, 91.27, 90.998, 93.346, 86.774, 84.915, 89.191, 88.73, 88.145, 89.61, 92.471, 90.935, 96.975, 93.631, 90.001, 91.93, 91.345, 95.95, 88.86, 93.88, 93.71, 93.749, 91.815, 92.286, 92.351, 89.15, 90.515, 94.131, 86.151, 89.64, 91.28, 89.535, 89.852, 90.251, 89.555, 84.271, 90.715, 89.91, 87.494, 95.255, 92.114, 87.636, 88.945, 90.58, 86.47, 91.866, 89.089, 92.355, 90.025]])
+</pre></div>
+</div>
+</div>
 </div>
 <blockquote>
-<div><p><strong>Answer here:</strong></p>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">keys</span></code> in the dictionary represent the sample size used to simulate the <code class="docutils literal notranslate"><span class="pre">values</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">keys</span></code> have 8 numbers and <code class="docutils literal notranslate"><span class="pre">values</span></code> have 8 list of 100 simulated values using the sample sizes in the corresponding <code class="docutils literal notranslate"><span class="pre">keys</span></code>.)</p>
 </div></blockquote>
 </section>
 <section id="task-6-plot-the-results">
@@ -808,7 +1108,12 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_means_by_sample_size</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_sample_means_by_sample_size</span><span class="p">)</span>
+
+<span class="n">mean_of_sample_means_by_sample_size</span> <span class="o">=</span> <span class="n">sample_means_by_sample_size</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">diff_sample_mean_empirical_means_by_sample_size</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mean_of_sample_means_by_sample_size</span> <span class="o">-</span> <span class="n">empirical_mean_time_spent_cleaning</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -826,13 +1131,19 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <p>Label the horizontal axis with the text <code class="docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">size</span></code> and the vertical axis with the text <code class="docutils literal notranslate"><span class="pre">Difference</span> <span class="pre">between</span> <span class="pre">sample</span> <span class="pre">mean</span> <span class="pre">and</span> <span class="pre">population</span> <span class="pre">mean</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;coral&quot;</span><span class="p">)</span> <span class="c1"># DO NOT change this line; it adds a dotted horizontal line at y=0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;coral&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-    <span class="c1"># complete the function call</span>
-<span class="p">);</span>
-<span class="c1"># add your code below to label the axes</span>
+    <span class="n">diff_sample_mean_empirical_means_by_sample_size</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> 
+    <span class="n">diff_sample_mean_empirical_means_by_sample_size</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sample size&#39;</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Difference between sample mean and population mean&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/0237911db987e7e0e2db7064975cc6dd4cf84a6131894212e0ceda8963a23515.png" src="../../../_images/0237911db987e7e0e2db7064975cc6dd4cf84a6131894212e0ceda8963a23515.png" />
 </div>
 </div>
 </section>
@@ -844,19 +1155,20 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <li><p>What is the empirical mean time spent cleaning by respondents per day (in minutes). Does this value make sense? Why or why not? Answer in one line. <strong>(1 mark)</strong></p></li>
 </ol>
 <blockquote>
-<div><p><strong>Answer here:</strong></p>
+<div><p>The empirical mean time spent cleaning is stored in <code class="docutils literal notranslate"><span class="pre">empirical_mean_time_spent_cleaning</span></code>. It is approximately 91 minutes. It seems reasonable that people spend about an hour and a half cleaning per day on average.</p>
+<p>(Any reasonable argument based on the context and the correct value is acceptable.)</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>Based on your final scatter plot, what trend or pattern do you notice between sample size and difference between the mean of sample means and empirical mean? Does the difference decrease or increase with sample size? Explain why this trend is seen, drawing on your understanding of randomness of sampling. <strong>(2 marks)</strong></p></li>
 </ol>
 <blockquote>
-<div><p><strong>Answer here:</strong></p>
+<div><p>As the sample size increases, the difference becomes closer to 0. This is due to the law of averages (or explain that with a larger sample size, a random sample is more likely to represent the population closesly.)</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
 <li><p>If you were to do further analysis to study how the time spent cleaning is different for various subpopulations, which additional sociodemographic variables might you consider? Why? Write 3-5 sentences identifying 1-2 variables (e.g. age - don’t pick this!) of interest and what differences in cleaning time you might expect to find.</p></li>
 </ol>
 <blockquote>
-<div><p><strong>Answer here:</strong></p>
+<div><p>(Any sociodemographic variable is acceptable with a reasonable expected difference identified.)</p>
 </div></blockquote>
 </section>
 </section>
@@ -892,20 +1204,20 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_7_solutions.html"
+       href="Homework_7.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
+        <p class="prev-next-title">GG274 Homework 7: Summary Statistics, Histograms and Simulation</p>
       </div>
     </a>
     <a class="right-next"
-       href="Homework_7_solution.html"
+       href="../../../practice/sample_midterm/GGR274_Midterm.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GG274 Homework 7: Summary Statistics, Histograms and Simulation</p>
+        <p class="prev-next-title">GGR274 midterm test (2025 Winter Practice)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lab/Lab_7';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lab/Lab_7_solutions';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 7: Functions" href="Lab_7_solutions.html" />
-    <link rel="prev" title="Class 6: Simulation and Law of Averages" href="../lecture/Class7_GGR274_MM_solution.html" />
+    <link rel="next" title="GG274 Homework 7: Summary Statistics, Histograms and Simulation" href="../homework/Homework_7.html" />
+    <link rel="prev" title="GGR274 Lab 7: Functions" href="Lab_7.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -201,8 +201,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class7_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=36409989">Prof. Li's Slides</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 7 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_7_solutions.html">Lab 7 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_7.html">Lab 7 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 7 Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_7.html">Homework 7 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_7_solution.html">Homework 7 Solution</a></li>
 </ul>
@@ -304,7 +304,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/lab/Lab_7.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week07/lab/Lab_7_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week07/lab/Lab_7.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week07/lab/Lab_7_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -490,6 +490,11 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;value1&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -498,11 +503,21 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;value1&#39;, &#39;key2&#39;: &#39;value2&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;new_value&quot;</span>
 <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;key1&#39;: &#39;new_value&#39;, &#39;key2&#39;: &#39;value2&#39;}
 </pre></div>
 </div>
 </div>
@@ -518,6 +533,15 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ibrahim&#39;: &#39;GGR274&#39;,
+ &#39;Adrienne&#39;: &#39;GGR274&#39;,
+ &#39;Asana&#39;: &#39;GGR274&#39;,
+ &#39;Yifeng&#39;: &#39;GGR274&#39;,
+ &#39;Yongxin&#39;: &#39;GGR274&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -528,11 +552,27 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ibrahim&#39;: &#39;GGR274&#39;,
+ &#39;Adrienne&#39;: &#39;GGR274&#39;,
+ &#39;Asana&#39;: &#39;GGR274&#39;,
+ &#39;Yifeng&#39;: &#39;GGR274&#39;,
+ &#39;Yongxin&#39;: &#39;GGR274&#39;,
+ &#39;Meng&#39;: &#39;EEB125&#39;,
+ &#39;Alan&#39;: &#39;EEB125&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use &quot;key&quot; to access the associated value</span>
 <span class="n">ta_to_course</span><span class="p">[</span><span class="s2">&quot;Meng&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;EEB125&#39;
 </pre></div>
 </div>
 </div>
@@ -547,6 +587,11 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
     <span class="n">time_use_data_raw</span><span class="p">[</span><span class="s2">&quot;dur44&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;CASEID&quot;</span><span class="p">,</span> <span class="s2">&quot;dur44&quot;</span><span class="p">]]</span>
 
 <span class="n">time_use_dur</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(368, 2)
 </pre></div>
 </div>
 </div>
@@ -567,7 +612,21 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="n">simulated_means_10</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">rsample</span> <span class="o">=</span> <span class="n">time_use_dur</span><span class="p">[</span><span class="s1">&#39;dur44&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">sample_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">simulated_means_10</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rsample</span><span class="p">)</span>
+
+<span class="n">simulated_means_10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[101.5, 165.8, 98.0, 126.9, 154.5]
 </pre></div>
 </div>
 </div>
@@ -579,7 +638,9 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>Create an empty dictionary called <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code>.  Add the key <code class="docutils literal notranslate"><span class="pre">sample_size[0]</span></code> with values <code class="docutils literal notranslate"><span class="pre">simulated_means_10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">sim_dict</span><span class="p">[</span><span class="n">sample_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">simulated_means_10</span>
 </pre></div>
 </div>
 </div>
@@ -590,7 +651,19 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>Repeat the steps in Task 1 to create simulated means for <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code> and store the results in <code class="docutils literal notranslate"><span class="pre">simulated_means_20</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_means_20</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">rsample</span> <span class="o">=</span> <span class="n">time_use_dur</span><span class="p">[</span><span class="s2">&quot;dur44&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+        <span class="n">n</span> <span class="o">=</span><span class="n">sample_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">simulated_means_20</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rsample</span><span class="p">)</span>
+
+<span class="n">simulated_means_20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[142.5, 180.25, 165.5, 191.5, 215.75]
 </pre></div>
 </div>
 </div>
@@ -601,7 +674,7 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>Add <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code> as a key with values <code class="docutils literal notranslate"><span class="pre">simulated_means_20</span></code> to <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_dict</span><span class="p">[</span><span class="n">sample_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span>  <span class="n">simulated_means_20</span>
 </pre></div>
 </div>
 </div>
@@ -612,10 +685,64 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>Store the data in <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code> in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">sim_df</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sim_dict</span><span class="p">)</span>
+
+<span class="n">sim_df</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>10</th>
+      <th>20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101.5</td>
+      <td>142.50</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>165.8</td>
+      <td>180.25</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>98.0</td>
+      <td>165.50</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>126.9</td>
+      <td>191.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>154.5</td>
+      <td>215.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -651,20 +778,20 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class7_GGR274_MM_solution.html"
+       href="Lab_7.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Class 6: Simulation and Law of Averages</p>
+        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_7_solutions.html"
+       href="../homework/Homework_7.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
+        <p class="prev-next-title">GG274 Homework 7: Summary Statistics, Histograms and Simulation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
