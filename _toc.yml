@@ -27,6 +27,17 @@ parts:
     - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
       title: Project Instruction
 
+  - caption: Week 9
+    chapters:
+    - file: weekly-materials/week09/lecture/Class9_GGR274_CL.ipynb
+      title: Prof. Li's Notebook
+    # - file: weekly-materials/week09/lecture/Class9_GGR274_CL_solutions.ipynb
+    #   title: Prof. Li's Notebook with Outputs
+    # - file: weekly-materials/week09/lab/Lab_9.ipynb
+    #   title: Lab 9 Notebook
+    # - file: weekly-materials/week09/homework/Homework_9.ipynb
+    #   title: Homework 9 Notebook
+
   - caption: Week 8
     chapters:
     - file: weekly-materials/week08/lecture/Class8_GGR274_MM.ipynb
