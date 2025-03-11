@@ -810,8 +810,8 @@ document.write(`
 <li><p>Null hypothesis: There is no difference in the average resting time between people with and without children under 14.</p></li>
 <li><p>Alternative hypothesis: There is difference in the average resting time between people with and without children under 14.</p>
 <ul class="simple">
-<li><p>2a. Alternative hypothesis: People with children with children under 14 have <em>less</em> resting time than the people with no children under 14 (preferred).</p></li>
-<li><p>2b. Alternative hypothesis: People with children with children under 14 have <em>more</em> resting time than the people with no children under 14.</p></li>
+<li><p>2a. Alternative hypothesis: People with children under 14 have <em>less</em> resting time than the people with no children under 14 (preferred).</p></li>
+<li><p>2b. Alternative hypothesis: People with children under 14 have <em>more</em> resting time than the people with no children under 14.</p></li>
 </ul>
 </li>
 </ol>
@@ -951,7 +951,7 @@ document.write(`
 <li><p>Alternative hypothesis: The average resting time of people with children is different from the average resting time of people without children.</p></li>
 </ol>
 <ul class="simple">
-<li><p>2a. Alternative hypothesis: People with children with children under 14 have less resting time than the people with no children under 14.</p></li>
+<li><p>2a. Alternative hypothesis: People with children under 14 have less resting time than the people with no children under 14.</p></li>
 </ul>
 <section id="a-thought-expriement-shuffling-process">
 <h4>A thought expriement: shuffling process<a class="headerlink" href="#a-thought-expriement-shuffling-process" title="Link to this heading">#</a></h4>
@@ -1074,11 +1074,11 @@ document.write(`
 <li><p>Both bootstrap and shuffling can be applied to compare two samples, but their logics are different.</p></li>
 </ol>
 <ul class="simple">
-<li><p>Bootstrap: resampling <strong>with displacement</strong> and get the distribution of mean differences, which represents the <em>mean differences in population</em></p></li>
+<li><p>Bootstrap: resampling <strong>with replacement</strong> and get the distribution of mean differences, which represents the <em>mean differences in population</em></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">bssample</span> <span class="pre">=</span> <span class="pre">restchild_df.sample(frac</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">replace</span> <span class="pre">=</span>&#160; <span class="pre">True)</span></code></p>
 <ul class="simple">
-<li><p>Shuffling: shuffle the label (reampling <strong>without displacement</strong>) and reassign to the samples to get the distribution of mean differences, which represents the <em>“unusual” values</em></p></li>
+<li><p>Shuffling: shuffle the label (reampling <strong>without replacement</strong>) and reassign to the samples to get the distribution of mean differences, which represents the <em>“unusual” values</em></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">restchild_sim</span> <span class="pre">=</span> <span class="pre">shuffle_df['Child_in_house'].sample(frac=1,</span> <span class="pre">replace</span> <span class="pre">=</span> <span class="pre">False).reset_index(drop</span> <span class="pre">=</span> <span class="pre">True)</span> </code></p>
 <ol class="arabic simple" start="2">
