@@ -33,10 +33,10 @@ parts:
       title: Prof. Li's Notebook
     # - file: weekly-materials/week09/lecture/Class9_GGR274_CL_solutions.ipynb
     #   title: Prof. Li's Notebook with Outputs
-    # - file: weekly-materials/week09/lab/Lab_9.ipynb
-    #   title: Lab 9 Notebook
-    # - file: weekly-materials/week09/homework/Homework_9.ipynb
-    #   title: Homework 9 Notebook
+    - file: weekly-materials/week09/lab/Lab_9.ipynb
+      title: Lab 9 Notebook
+    - file: weekly-materials/week09/homework/Homework_9.ipynb
+      title: Homework 9 Notebook
 
   - caption: Week 8
     chapters:
