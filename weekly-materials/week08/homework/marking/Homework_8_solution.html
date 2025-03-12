@@ -1,0 +1,1546 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GG274 Homework 8: Hypothesis Testing &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week08/homework/marking/Homework_8_solution';</script>
+    <link rel="icon" href="../../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Class 6: Simulation and Law of Averages" href="../../../week07/lecture/Class7_GGR274_MM.html" />
+    <link rel="prev" title="GG274 Homework 8: Hypothesis Testing" href="../Homework_8.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2025
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/class/m5l5abtof4o78y/post/6">Piazza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/GGR274_Final_Project_Instruction.html">Project Instruction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lecture/Class9_GGR274_CL.html">Class 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lab/Lab_9.html">Lab 9 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/homework/Homework_9.html">Homework 9 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture/Class8_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lecture/Class8_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lab/Lab_8.html">Lab 8 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lab/marking/Lab_8_solution.html">Lab 8 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Homework_8.html">Homework 8 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 8 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lecture/Class7_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=36409989">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7.html">Lab 7 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7_solutions.html">Lab 7 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/Homework_7.html">Homework 7 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/Homework_7_solution.html">Homework 7 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/sample_midterm/GGR274_Midterm.html">Midterm practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lecture/Class5_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5.html">Lab 5 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5_solutions.html">Lab 5 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/Homework_5.html">Homework 5 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/Homework_5_solution.html">Homework 5 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=35904876">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lecture/Class4_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4.html">Lab 4 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4_solutions.html">Lab 4 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/Homework_4.html">Homework 4 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/Homework_4_solution.html">Homework 4 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lecture/Class3_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lecture/Class3_GGR274_KR_solutions.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3.html">Lab 3 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3.html">Homework 3 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lecture/Class2_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lecture/Class2_GGR274_KR_sol.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2.html">Lab 2 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2.html">Homework 2 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files/?preview=35527981">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week08/homework/marking/Homework_8_solution.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/weekly-materials/week08/homework/marking/Homework_8_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GG274 Homework 8: Hypothesis Testing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-read-the-neighbourhood-instability-data-into-a-pandas-dataframe">Step 1 - Read the Neighbourhood Instability data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-the-mental-health-visit-data-into-a-pandas-dataframe">Step 2 - Read the mental health visit data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-merge-mental-health-visits-and-instability">Step 3 - Merge mental health visits and instability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability">Step 5 - Do neighbourhoods with high residential instability have more mental health visits compared to neighbourhoods with low residential isntability?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-set-up-a-simulation-in-python-to-test-if-the-medians-are-equal">Step 6 - Set up a simulation in python to test if the medians are equal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true">Step 7 - Compute the distribution of simulated values of the median difference assuming the null hypothesis is true</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-compute-the-p-value">Step 8 - Compute the p-value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-communicate-what-you-did-in-the-steps-above">Step 9 - Communicate what you did in the steps above</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gg274-homework-8-hypothesis-testing">
+<h1>GG274 Homework 8: Hypothesis Testing<a class="headerlink" href="#gg274-homework-8-hypothesis-testing" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Residential instability is one component of the <a class="reference external" href="https://www.publichealthontario.ca/-/media/Documents/O/2017/on-marg-technical.pdf?la=en%E2%89%BBlang=en&amp;amp;hash=EED54DF437EDEDA2DFE1A00A4B14A50A">Ontario Marginalization Index</a> that includes indicators of types and density of residential accommodations, and certain family structure characteristics, such as living alone and dwelling owndership. (<a class="reference external" href="https://www.ontariohealthprofiles.ca/canmargCAN.php">see OCHPP</a>)</p>
+<p>In this homework you will explore the following question:</p>
+<blockquote>
+<div><p><strong>Are mental health visits different in Toronto neighbourhoods with higher “residential instability”?</strong></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-read-the-neighbourhood-instability-data-into-a-pandas-dataframe">
+<h2>Step 1 - Read the Neighbourhood Instability data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#step-1-read-the-neighbourhood-instability-data-into-a-pandas-dataframe" title="Link to this heading">#</a></h2>
+<p>a)  The data is stored in <code class="docutils literal notranslate"><span class="pre">1_marg_neighb_toronto_2006_OnMarg.xls</span></code> - a Microsoft Excel file format with file extension <code class="docutils literal notranslate"><span class="pre">.xls</span></code>.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <code class="docutils literal notranslate"><span class="pre">read_excel</span></code> to read the sheet <code class="docutils literal notranslate"><span class="pre">Neighbourhood_Toronto_OnMarg</span></code> into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> named <code class="docutils literal notranslate"><span class="pre">marg_neighbourhoods</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighbourhoods</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;1_marg_neighb_toronto_2006_OnMarg.xls&quot;</span><span class="p">,</span>
+                                    <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Neighbourhood_Toronto_OnMarg&quot;</span><span class="p">,</span> 
+                                    <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">marg_neighbourhoods</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighb id</th>
+      <th>Neighbourhood name</th>
+      <th>POPULATION</th>
+      <th>INSTABILITY</th>
+      <th>INSTABILITY_Q</th>
+      <th>DEPRIVATION</th>
+      <th>DEPRIVATION_Q</th>
+      <th>ETHNICCONCENTRATION</th>
+      <th>ETHNICCONCENTRATION_Q</th>
+      <th>DEPENDENCY</th>
+      <th>DEPENDENCY_Q</th>
+      <th>ONMARG_COMBINED_Q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>-0.6639</td>
+      <td>1</td>
+      <td>0.1620</td>
+      <td>3</td>
+      <td>2.4548</td>
+      <td>5</td>
+      <td>-0.2021</td>
+      <td>3</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>-0.1081</td>
+      <td>1</td>
+      <td>1.0195</td>
+      <td>5</td>
+      <td>3.7433</td>
+      <td>5</td>
+      <td>-0.5975</td>
+      <td>1</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>-0.3131</td>
+      <td>1</td>
+      <td>0.3460</td>
+      <td>4</td>
+      <td>1.6220</td>
+      <td>4</td>
+      <td>0.2845</td>
+      <td>5</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>0.1866</td>
+      <td>2</td>
+      <td>0.4704</td>
+      <td>4</td>
+      <td>1.2396</td>
+      <td>3</td>
+      <td>0.2734</td>
+      <td>5</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>-0.0150</td>
+      <td>2</td>
+      <td>0.8040</td>
+      <td>5</td>
+      <td>1.9911</td>
+      <td>4</td>
+      <td>-0.3527</td>
+      <td>2</td>
+      <td>2.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">marg_neighbourhoods</span></code> to create a another <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> that has three columns: <code class="docutils literal notranslate"><span class="pre">&quot;Neighb</span> <span class="pre">id</span> <span class="pre">&quot;,</span> <span class="pre">&quot;Neighbourhood</span> <span class="pre">name</span> <span class="pre">&quot;,</span> <span class="pre">&quot;INSTABILITY&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instability_df</span> <span class="o">=</span> <span class="n">marg_neighbourhoods</span><span class="p">[</span><span class="n">marg_neighbourhoods</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]]</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="n">instability_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Neighb id &#39;, &#39;Neighbourhood name &#39;, &#39;INSTABILITY&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Rename the column names of <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> using the following table.  The DataFrame with the new column names should be called <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> (i.e., don’t change the name of the DataFrame).</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Original column name</p></th>
+<th class="head"><p>New column name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“Neighb id “</p></td>
+<td><p>n_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>“INSTABILITY”</p></td>
+<td><p>instability</p></td>
+</tr>
+<tr class="row-even"><td><p>“Neighbourhood name “</p></td>
+<td><p>name</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Be aware of the trailing spaces!</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Neighb id &quot;</span><span class="p">:</span> <span class="s2">&quot;n_id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;INSTABILITY&quot;</span> <span class="p">:</span> <span class="s2">&quot;instability&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Neighbourhood name &quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+
+<span class="n">instability_df</span> <span class="o">=</span> <span class="n">instability_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">instability_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">instability_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n_id</th>
+      <th>name</th>
+      <th>instability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>-0.6639</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>-0.1081</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>-0.3131</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>0.1866</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>-0.0150</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="step-2-read-the-mental-health-visit-data-into-a-pandas-dataframe">
+<h2>Step 2 - Read the mental health visit data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.<a class="headerlink" href="#step-2-read-the-mental-health-visit-data-into-a-pandas-dataframe" title="Link to this heading">#</a></h2>
+<p>a) In this step you will read in data on rates of mental health visits stored in <code class="docutils literal notranslate"><span class="pre">2_ahd_neighb_db_ast_hbp_mhv_copd_2012.xls</span></code> into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> named <code class="docutils literal notranslate"><span class="pre">mental_health_neighbourhoods</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mental_health_neighbourhoods</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;2_ahd_neighb_db_ast_hbp_mhv_copd_2012.xls&quot;</span><span class="p">,</span>
+                                             <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;2_MentalHealthV_2012&quot;</span><span class="p">,</span> 
+                                             <span class="n">header</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">mental_health_neighbourhoods</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Male</th>
+      <th>Female</th>
+      <th>Both sexes</th>
+      <th>Male.1</th>
+      <th>Female.1</th>
+      <th>Both sexes.1</th>
+      <th>Male.2</th>
+      <th>Female.2</th>
+      <th>...</th>
+      <th>Female.12</th>
+      <th>Both sexes.12</th>
+      <th>Rate Ratio**, Both sexes.4</th>
+      <th>H/ L/ NS, Both sexes.4</th>
+      <th>(95% CI) LL, Male.4</th>
+      <th>(95% CI) UL,  Male.4</th>
+      <th>(95% CI) LL, Female.4</th>
+      <th>(95% CI) UL, Female.4</th>
+      <th>(95% CI) LL, Both sexes.4</th>
+      <th>(95% CI) UL, Both sexes.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>938</td>
+      <td>1168</td>
+      <td>2106</td>
+      <td>13915</td>
+      <td>14046</td>
+      <td>27961</td>
+      <td>6.6</td>
+      <td>8.2</td>
+      <td>...</td>
+      <td>7.2</td>
+      <td>7.2</td>
+      <td>0.85</td>
+      <td>L</td>
+      <td>6.1</td>
+      <td>8.3</td>
+      <td>6.2</td>
+      <td>8.3</td>
+      <td>6.4</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>866</td>
+      <td>1130</td>
+      <td>1996</td>
+      <td>12256</td>
+      <td>13082</td>
+      <td>25338</td>
+      <td>7.0</td>
+      <td>8.6</td>
+      <td>...</td>
+      <td>8.5</td>
+      <td>8.2</td>
+      <td>0.96</td>
+      <td>NS</td>
+      <td>6.6</td>
+      <td>9.4</td>
+      <td>7.2</td>
+      <td>10.0</td>
+      <td>7.3</td>
+      <td>9.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>275</td>
+      <td>410</td>
+      <td>685</td>
+      <td>4124</td>
+      <td>4453</td>
+      <td>8577</td>
+      <td>6.4</td>
+      <td>9.2</td>
+      <td>...</td>
+      <td>8.1</td>
+      <td>7.9</td>
+      <td>0.93</td>
+      <td>NS</td>
+      <td>5.9</td>
+      <td>9.9</td>
+      <td>6.4</td>
+      <td>10.0</td>
+      <td>6.7</td>
+      <td>9.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>328</td>
+      <td>453</td>
+      <td>781</td>
+      <td>4130</td>
+      <td>4470</td>
+      <td>8600</td>
+      <td>7.7</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>9.1</td>
+      <td>1.07</td>
+      <td>NS</td>
+      <td>7.2</td>
+      <td>11.6</td>
+      <td>7.3</td>
+      <td>11.0</td>
+      <td>7.8</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>287</td>
+      <td>396</td>
+      <td>683</td>
+      <td>3787</td>
+      <td>4028</td>
+      <td>7815</td>
+      <td>7.4</td>
+      <td>9.6</td>
+      <td>...</td>
+      <td>8.1</td>
+      <td>7.5</td>
+      <td>0.88</td>
+      <td>NS</td>
+      <td>4.8</td>
+      <td>9.2</td>
+      <td>6.2</td>
+      <td>10.5</td>
+      <td>6.1</td>
+      <td>9.1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 81 columns</p>
+</div></div></div>
+</div>
+<p>b) Create a new DataFrame <code class="docutils literal notranslate"><span class="pre">mh_visit_rates</span></code> by selecting the columns in <code class="docutils literal notranslate"><span class="pre">mental_health_neighbourhoods</span></code> that corresponds to Neighbourhood ID, Neighbourhood Name, and ‘Age-Standardized rate of Mental Health Visits (2012), All Ages 20+’ rename this column in <code class="docutils literal notranslate"><span class="pre">mh_visit_rates</span></code> to <code class="docutils literal notranslate"><span class="pre">mh_visit_rates_mf</span></code>.  When you rename this column don’t change the name of the DataFrame <code class="docutils literal notranslate"><span class="pre">mh_visit_rates</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mh_visit_rates</span> <span class="o">=</span> <span class="n">mental_health_neighbourhoods</span><span class="p">[</span><span class="n">mental_health_neighbourhoods</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]]</span>
+
+<span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Unnamed: 0&quot;</span><span class="p">:</span> <span class="s2">&quot;n_id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Both sexes.2&quot;</span> <span class="p">:</span> <span class="s2">&quot;mh_visit_rates_mf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Unnamed: 1&quot;</span> <span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+
+<span class="n">mh_visit_rates</span> <span class="o">=</span> <span class="n">mh_visit_rates</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">mh_visit_rates</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">mh_visit_rates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n_id</th>
+      <th>name</th>
+      <th>mh_visit_rates_mf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>7.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>8.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>8.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="step-3-merge-mental-health-visits-and-instability">
+<h2>Step 3 - Merge mental health visits and instability<a class="headerlink" href="#step-3-merge-mental-health-visits-and-instability" title="Link to this heading">#</a></h2>
+<p>In this step you will merge the <code class="docutils literal notranslate"><span class="pre">mh_visit_rates</span></code> with <code class="docutils literal notranslate"><span class="pre">mental_health_neighbourhoods</span></code>.</p>
+<p>a) Merge <code class="docutils literal notranslate"><span class="pre">mh_visit_rates</span></code> with <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> by matching the values of <code class="docutils literal notranslate"><span class="pre">&quot;n_id&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code>, and name this DataFrame <code class="docutils literal notranslate"><span class="pre">mh_visit_instability</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mh_visit_instability</span> <span class="o">=</span> <span class="n">mh_visit_rates</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">instability_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;n_id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n_id</th>
+      <th>name</th>
+      <th>mh_visit_rates_mf</th>
+      <th>instability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>7.4</td>
+      <td>-0.6639</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>7.8</td>
+      <td>-0.1081</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>7.8</td>
+      <td>-0.3131</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>8.9</td>
+      <td>0.1866</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>8.5</td>
+      <td>-0.0150</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="step-4">
+<h2>Step 4<a class="headerlink" href="#step-4" title="Link to this heading">#</a></h2>
+<p>a) Create a new column in <code class="docutils literal notranslate"><span class="pre">mh_visit_instability</span></code> named <code class="docutils literal notranslate"><span class="pre">instability_binary</span></code> that categorizes neighbourhoods. The new columns should have two possible values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;High&quot;</span></code>, if the neighbourhood’s instability value is greater than or equal to the mean of <code class="docutils literal notranslate"><span class="pre">&quot;instability&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Low&quot;</span></code>, if the neighbourhood’s instability value is less than the mean of <code class="docutils literal notranslate"><span class="pre">&quot;instability&quot;</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_instab</span> <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="p">[</span><span class="s2">&quot;instability&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="n">mh_visit_instability</span><span class="p">[</span><span class="s2">&quot;instability&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">mean_instab</span><span class="p">,</span> 
+    <span class="s2">&quot;instability_binary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;High&quot;</span>
+
+<span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="n">mh_visit_instability</span><span class="p">[</span><span class="s2">&quot;instability&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">mean_instab</span><span class="p">,</span> 
+    <span class="s2">&quot;instability_binary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Low&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Compute the frequency distribution of <code class="docutils literal notranslate"><span class="pre">instability_binary</span></code>. Save the results in <code class="docutils literal notranslate"><span class="pre">instability_binary_frequencies</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instability_binary_frequencies</span> <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="p">[</span><span class="s2">&quot;instability_binary&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">instability_binary_frequencies</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>instability_binary
+Low     70
+High    66
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Is there evidence that Toronto has many neighbourhoods that have residential instability?  Briefly explain. <strong>(1 mark)</strong></p>
+<blockquote>
+<div><p>There is more than one possible way to answer the question. e.g.,</p>
+<p>i. The data shows that about half of the neighbourhoods in Toronto, 66 out of 136, having residential instability measures that are higher than the city-wide mean. It is difficult to provide a definite answer to the question based on the result since it only provide comparison within the city.</p>
+<p>ii. (a bit more naive answer) About half of the neighbourhoods in Toronto have high residential instability.</p>
+<p>Any answer with a sensible reasoning based on the data is acceptable.</p>
+</div></blockquote>
+</section>
+<section id="step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability">
+<h2>Step 5 - Do neighbourhoods with high residential instability have more mental health visits compared to neighbourhoods with low residential isntability?<a class="headerlink" href="#step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability" title="Link to this heading">#</a></h2>
+<p>a) Use the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">describe</span></code> method to compute the distribution of <code class="docutils literal notranslate"><span class="pre">mh_visit_rates_mf</span></code> in <code class="docutils literal notranslate"><span class="pre">mh_visit_instability</span></code> <strong>grouped by</strong> <code class="docutils literal notranslate"><span class="pre">instability_binary</span></code>.  Store the results in <code class="docutils literal notranslate"><span class="pre">median_table</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_table</span> <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;instability_binary&quot;</span><span class="p">)[</span><span class="s2">&quot;mh_visit_rates_mf&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="n">median_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>instability_binary</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High</th>
+      <td>66.0</td>
+      <td>8.362121</td>
+      <td>0.937388</td>
+      <td>5.9</td>
+      <td>7.825</td>
+      <td>8.45</td>
+      <td>9.075</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>Low</th>
+      <td>70.0</td>
+      <td>7.867143</td>
+      <td>1.000539</td>
+      <td>5.7</td>
+      <td>7.025</td>
+      <td>7.80</td>
+      <td>8.775</td>
+      <td>9.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">median_table</span></code> to compute the difference in medians between neighbourhoods with high and low instability.  Store this value in <code class="docutils literal notranslate"><span class="pre">median_diff</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_diff</span> <span class="o">=</span> <span class="n">median_table</span><span class="p">[</span><span class="s2">&quot;50%&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">median_table</span><span class="p">[</span><span class="s2">&quot;50%&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">median_diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\yukiz\AppData\Local\Temp\ipykernel_26372\2073326976.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  median_diff = median_table[&quot;50%&quot;][0] - median_table[&quot;50%&quot;][1]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6499999999999995
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-set-up-a-simulation-in-python-to-test-if-the-medians-are-equal">
+<h2>Step 6 - Set up a simulation in python to test if the medians are equal<a class="headerlink" href="#step-6-set-up-a-simulation-in-python-to-test-if-the-medians-are-equal" title="Link to this heading">#</a></h2>
+<p>a) In this step you will write a function <code class="docutils literal notranslate"><span class="pre">random_shuffle_median</span></code> that returns a simulated value of the median difference (a simulated value of the test statistic) of mental health visit rates in neighbourhoods with high versus low residential instability assuming that there really is no difference in mental health visit rates between these types of neighbourhoods.</p>
+<p>A step-by-step explantion of a similar function was given in lecture, and you can follow this example to help guide you through this step.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">random_shuffle_median</span></code> is started for you below. Your task is to complete the function by filling in the <code class="docutils literal notranslate"><span class="pre">...</span></code>.</p>
+<p>Try writing a meaningful docstring for <code class="docutils literal notranslate"><span class="pre">random_shuffle_median</span></code>.  The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference external" href="https://pandas.pydata.org/docs/development/contributing_docstring.html">docstring guide</a> has some great examples and guidelines.  (NB: this will not be graded)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># def random_shuffle_median():</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     Put your docstring here (optional)</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+
+<span class="c1">#     # shuffle the column of mh_visit_instability that corresponds to high/low instability</span>
+
+<span class="c1">#     instability_binary_shuffle = mh_visit_instability[...].sample(</span>
+<span class="c1">#         frac=1, replace=False).reset_index(drop=True)</span>
+    
+<span class="c1">#     # calculate the median visit rate for high and low instability neighbourhoods</span>
+
+<span class="c1">#     visitrate_low_shuffle = mh_visit_instability.loc[instability_binary_shuffle == ..., ...].median()</span>
+    
+<span class="c1">#     visitrate_high_shuffle  = mh_visit_instability.loc[instability_binary_shuffle ==  ..., ...].median()</span>
+    
+<span class="c1">#     shuffled_diff = ... - ...</span>
+    
+<span class="c1">#     return shuffled_diff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">random_shuffle_median</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Randomly shuffles the column of mh_visit_instability that corresponds to </span>
+
+<span class="sd">    high/low instability and calculates the difference in median visit rates </span>
+<span class="sd">    </span>
+<span class="sd">    for high and low instability neighbourhoods</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">instability_binary_shuffle</span> <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="p">[</span><span class="s2">&quot;instability_binary&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+        <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">visitrate_low_shuffle</span> <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">instability_binary_shuffle</span> <span class="o">==</span> <span class="s2">&quot;Low&quot;</span><span class="p">,</span> <span class="s2">&quot;mh_visit_rates_mf&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+    <span class="n">visitrate_high_shuffle</span>  <span class="o">=</span> <span class="n">mh_visit_instability</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">instability_binary_shuffle</span> <span class="o">==</span> <span class="s2">&quot;High&quot;</span><span class="p">,</span> <span class="s2">&quot;mh_visit_rates_mf&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+    <span class="n">shuffled_diff</span> <span class="o">=</span> <span class="n">visitrate_high_shuffle</span> <span class="o">-</span> <span class="n">visitrate_low_shuffle</span> 
+    <span class="k">return</span> <span class="n">shuffled_diff</span>
+
+<span class="n">random_shuffle_median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">random_shuffle_median</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Randomly shuffles the column of mh_visit_instability that corresponds to 
+
+    high/low instability and calculates the difference in median visit rates 
+    
+    for high and low instability neighbourhoods
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Explain the purpose of</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mh_visit_instability</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+    <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>in 1-2 sentences.</p>
+<blockquote>
+<div><p>The line randomly samples 100% (<code class="docutils literal notranslate"><span class="pre">frac=1</span></code>) of the selected column (<code class="docutils literal notranslate"><span class="pre">'instability_binary'</span></code>) without replacements (<code class="docutils literal notranslate"><span class="pre">replace=False</span></code>) and removes the old ordering (<code class="docutils literal notranslate"><span class="pre">reset_index(drop=True)</span></code>). It mimicks random asingment of the high vs low labels to each neighbourhood.</p>
+</div></blockquote>
+</section>
+<section id="step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true">
+<h2>Step 7 - Compute the distribution of simulated values of the median difference assuming the null hypothesis is true<a class="headerlink" href="#step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true" title="Link to this heading">#</a></h2>
+<p>We will use your student number to generate data for this homework. Complete the assignment statement below by typing your student number as an <code class="docutils literal notranslate"><span class="pre">int</span></code>. In other words assign your student number as an integer to the variable <code class="docutils literal notranslate"><span class="pre">student_number</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Replace the ... with your student number</span>
+<span class="n">student_number</span> <span class="o">=</span> <span class="mi">12345</span>
+
+<span class="c1"># # This checks that you correctly typed in your student_number as an int.</span>
+<span class="c1"># # Make sure there&#39;s no error when you run this cell!</span>
+<span class="c1"># assert type(student_number) == int</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>a) Write a function called <code class="docutils literal notranslate"><span class="pre">shuffled_diffs</span></code> that returns a list.  The function should use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop that iterates the function <code class="docutils literal notranslate"><span class="pre">random_shuffle_median</span></code> an arbitrary number of times.  The number of times that the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates should be controlled by a function parameter named <code class="docutils literal notranslate"><span class="pre">number_of_shuffles</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">shuffled_diffs</span><span class="p">(</span><span class="n">number_of_shuffles</span><span class="p">):</span>
+    <span class="n">shuffled_diffs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_shuffles</span><span class="p">):</span>
+        <span class="n">shuffled_diffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_shuffle_median</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">shuffled_diffs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Use <code class="docutils literal notranslate"><span class="pre">shuffled_diffs</span></code> to compute 10 000 simulated median differences between high and low instability neighbourhoods assuming that there is no difference in median mental health visit rates between high and low instability neighbourhoods.  Store the values in <code class="docutils literal notranslate"><span class="pre">shuffled_diffs_10000</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">student_number</span><span class="p">)</span>
+
+<span class="n">shuffled_diffs_10000</span> <span class="o">=</span> <span class="n">shuffled_diffs</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Plot the distribution of the 10,000 simulated values stored in <code class="docutils literal notranslate"><span class="pre">shuffled_diffs_10000</span></code> using a <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> histogram. Name the plot <code class="docutils literal notranslate"><span class="pre">null_hypothesis_distribution_plot</span></code>.  Label the horizontal axis as <code class="docutils literal notranslate"><span class="pre">&quot;Difference</span> <span class="pre">in</span> <span class="pre">median</span> <span class="pre">visit</span> <span class="pre">rates</span> <span class="pre">for</span> <span class="pre">high</span> <span class="pre">and</span> <span class="pre">low</span> <span class="pre">instability</span> <span class="pre">neighbourhoods&quot;</span></code> and the vertical axis as <code class="docutils literal notranslate"><span class="pre">&quot;Frequency&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">null_hypothesis_distribution_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">shuffled_diffs_10000</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Difference in median visit rates for high and low instability neighbourhoods&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/5a71108a48d5f34e147406dd5eae0c1bd94e0a7137a773a5ea46d521534b0082.png" src="../../../../_images/5a71108a48d5f34e147406dd5eae0c1bd94e0a7137a773a5ea46d521534b0082.png" />
+</div>
+</div>
+</section>
+<section id="step-8-compute-the-p-value">
+<h2>Step 8 - Compute the p-value<a class="headerlink" href="#step-8-compute-the-p-value" title="Link to this heading">#</a></h2>
+<p>a) Compute the number of simulated differences in medians in <code class="docutils literal notranslate"><span class="pre">shuffled_diffs_10000</span></code> that are greater than or equal to the observed median difference (<code class="docutils literal notranslate"><span class="pre">median_diff</span></code>).  Store this value in <code class="docutils literal notranslate"><span class="pre">right_extreme</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">right_extreme</span> <span class="o">=</span> <span class="n">shuffled_diffs_10000</span> <span class="o">&gt;=</span> <span class="n">median_diff</span>
+
+<span class="n">right_extreme</span> <span class="o">=</span> <span class="n">right_extreme</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Compute the number of simulated differences in medians in <code class="docutils literal notranslate"><span class="pre">shuffled_diffs_10000</span></code> that are less than the observed median difference (<code class="docutils literal notranslate"><span class="pre">median_diff</span></code>).  Store this value in <code class="docutils literal notranslate"><span class="pre">left_extreme</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">left_extreme</span> <span class="o">=</span> <span class="n">shuffled_diffs_10000</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">median_diff</span>
+
+<span class="n">left_extreme</span> <span class="o">=</span> <span class="n">left_extreme</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Use <code class="docutils literal notranslate"><span class="pre">right_extreme</span></code> and <code class="docutils literal notranslate"><span class="pre">left_extreme</span></code> to compute the p-value.  Store the p-value in <code class="docutils literal notranslate"><span class="pre">pvalue</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pvalue</span> <span class="o">=</span> <span class="p">(</span><span class="n">left_extreme</span> <span class="o">+</span> <span class="n">right_extreme</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10000</span>
+
+<span class="n">pvalue</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0064
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-9-communicate-what-you-did-in-the-steps-above">
+<h2>Step 9 - Communicate what you did in the steps above<a class="headerlink" href="#step-9-communicate-what-you-did-in-the-steps-above" title="Link to this heading">#</a></h2>
+<p>a) In a few sentences introduce the question that you explored in this homework (see the <a class="reference internal" href="#gg274-homework-8-hypothesis-testing"><span class="xref myst">beginning</span></a> of this homework).  For example, why do you or others think this is an important question?  (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>We investigated whether neighbourhoods whose residential statuses are relatively instable visit mental health services more or less frequently compared to those with relatively stable residential statuses. The analysis may tell us whether the marginalized neighbourhoods need more support for their mental health.</p>
+</div></blockquote>
+<p>b)  Briefly describe the data sources that you used to answer the question.  Which statistical variables did you use and why did you use these varaibles? (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>We used the residential instabilty measure from the Ontario Marginalization Index and the age-standardized rates for mental health visits among those above age 20. We computed the mean of the instability measure to dicotomize the neighbourhoods to those whose measures are above the mean and those whose measures are below the mean. This allowed us to label the neighbourhoods into two groups - high vs. low residential instability.</p>
+<p>We then computed the difference in the median mental health visit rates between the two groups. The medians provided the “typical” (or centre of the distributions) visit rates of the two groups.</p>
+</div></blockquote>
+<p>c) What computational and statistical methods or analyses did you use to answer the question?  Briefly describe these methods and how they were used to answer the question.  (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>We simulated the distribution of the difference in median mental health visits rates under the assumption that there is no difference in the median rates betwee the two groups using the bootstrap. We then located the observed difference in the simulated distribution to assess high likely it would be to observe the value when there is actually no difference. When the location of the value in the distribution indicates that it is unlikely, we can reasonably conclude that the median mental health visit rates are different between the two groups.</p>
+<p>Note: Full marks if the data and method used are reasonably well explained between part b) and c).</p>
+</div></blockquote>
+<p>d) Briefly describe the results of your statistical analysis in a few sentences. (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>After locating the observed difference in the simulated distribution, the resulting p-value is 0.0064 which is very small. It is reasonable to reject the hypothtesis that there is no difference between the two groups and conclude that the mental health visit rates are different between high and low residential instability neighbourhoods. Specifically, the visit rates are higher for those in neighbourhood with higher residential instability.</p>
+</div></blockquote>
+<p>e) What conclusions can you draw about the question you set out to answer that is supported by the data and statistical analysis of the data?  State at least one limitation of your conclusions. (See the <a class="reference external" href="https://libguides.usc.edu/writingguide/limitations">USC Research Guide section on study limitations</a>) (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>The data shows that the typical mental health visit rates in Toronto neighbourhoods with relatively unstable residential statuses is higher. Our statistical analysis provides a reasonably strong evidence that there is a systematic difference and we didn’t observe the difference by chance.</p>
+<p>Limitations may include…</p>
+<ul class="simple">
+<li><p>the mental health visit rate data are from 2012 whereas the Ontario Marginalization Index is from 2006; a significant change in the neighbourhood composition may have altered the residential stability.</p></li>
+<li><p>the mental health visit rates are based on OHIP only (this requires some diggin on the data source: <a class="reference external" href="https://www.ontariohealthprofiles.ca/o_documents/aboutTheDataON/1_AboutTheData_AdultHealthDisease.pdf">https://www.ontariohealthprofiles.ca/o_documents/aboutTheDataON/1_AboutTheData_AdultHealthDisease.pdf</a>); other types of mental health visits may be relevant.</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Any reasonable limitation identified is acceptable.</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week08/homework/marking"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Homework_8.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GG274 Homework 8: Hypothesis Testing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../week07/lecture/Class7_GGR274_MM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class 6: Simulation and Law of Averages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-read-the-neighbourhood-instability-data-into-a-pandas-dataframe">Step 1 - Read the Neighbourhood Instability data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-the-mental-health-visit-data-into-a-pandas-dataframe">Step 2 - Read the mental health visit data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-merge-mental-health-visits-and-instability">Step 3 - Merge mental health visits and instability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability">Step 5 - Do neighbourhoods with high residential instability have more mental health visits compared to neighbourhoods with low residential isntability?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-set-up-a-simulation-in-python-to-test-if-the-medians-are-equal">Step 6 - Set up a simulation in python to test if the medians are equal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true">Step 7 - Compute the distribution of simulated values of the median difference assuming the null hypothesis is true</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-compute-the-p-value">Step 8 - Compute the p-value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-communicate-what-you-did-in-the-steps-above">Step 9 - Communicate what you did in the steps above</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
