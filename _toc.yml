@@ -46,8 +46,12 @@ parts:
       title: Prof. Moon's Notebook with Exercise Solutions
     - file: weekly-materials/week08/lab/Lab_8.ipynb
       title: Lab 8 Notebook
+    - file: weekly-materials/week08/lab/marking/Lab_8_solution.ipynb
+      title: Lab 8 Solution
     - file: weekly-materials/week08/homework/Homework_8.ipynb
       title: Homework 8 Notebook
+    - file: weekly-materials/week08/homework/marking/Homework_8_solution.ipynb
+      title: Homework 8 Solution
 
   - caption: Week 7
     chapters:
