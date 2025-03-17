@@ -42,8 +42,8 @@ parts:
     chapters:
     - file: weekly-materials/week09/lecture/Class9_GGR274_CL.ipynb
       title: Prof. Li's Notebook
-    - file: weekly-materials/week09/lecture/Class9_GGR274_CL_solutions.ipynb
-      title: Prof. Li's Notebook with outputs
+    # - file: weekly-materials/week09/lecture/Class9_GGR274_CL_solutions.ipynb
+    #   title: Prof. Li's Notebook with outputs
     - file: weekly-materials/week09/lab/Lab_9.ipynb
       title: Lab 9 Notebook
     - file: weekly-materials/week09/homework/Homework_9.ipynb
