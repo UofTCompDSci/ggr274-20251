@@ -200,9 +200,6 @@
 
 
 
-
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
 <ul class="nav bd-sidenav">
@@ -481,11 +478,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pop-quiz">POP QUIZ!!</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">To this point we have used quantiles to classify continous values in maps.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">What other common options do we have?  See the document of GeoDataFrame.plot and mapclassify</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-background">Adding a background</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-reproject-the-map-into-web-mercator-and-compare-to-the-original-projection">Let’s reproject the map into Web Mercator and compare to the original projection:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-add-the-web-basemap-we-can-do-the-following">To add the web basemap, we can do the following</a></li>
@@ -499,21 +492,19 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-we-interpretate-it-why-do-we-want-to-use-this-figure">How can we interpretate it? (Why do we want to use this figure?)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-clustering">Introduction to clustering</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-clustering">What is clustering?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-clustering">Introduction to clustering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-clustering">What is clustering?</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-want-to-identify-clusters">Why do we want to identify clusters?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-clustering-at-a-high-level-is-doing-the-same-thing-but-one-attribute-to-consider-is-geography">Spatial clustering, at a high level, is doing the same thing but one attribute to consider is geography.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-want-to-do-spatial-clustering-of-a-variable-what-two-pieces-of-information-do-we-need-don-t-over-think">If we want to do ‘spatial clustering’ of a variable what two pieces of information do we need? (don’t over think!!!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-clustering-at-a-high-level-is-doing-the-same-thing-but-one-attribute-to-consider-is-geography">Spatial clustering, at a high level, is doing the same thing but one attribute to consider is geography.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation">Autocorrelation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-autocorrelation">Spatial Autocorrelation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours">1) For each observation (in this case, neighborhood) we need to know their neighbours!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours">2) Next we need to describe the value of our attribute of interest in neighbours</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours">3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation">Autocorrelation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-autocorrelation">Spatial Autocorrelation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-again-information-do-we-need-to-do-answer-this-question">So again, information do we need to do answer this question?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours">1) For each observation (in this case, neighborhood) we need to know their neighbours!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours">2) Next we need to describe the value of our attribute of interest in neighbours</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours">3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-talk-about-the-code-to-make-this-works-next-week">We will talk about the code to make this works next week.</a></li>
 </ul>
 </li>
@@ -1038,11 +1029,8 @@ document.write(`
 </section>
 <section id="more-on-cartography">
 <h1>More on Cartography<a class="headerlink" href="#more-on-cartography" title="Link to this heading">#</a></h1>
-<section id="to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">
-<h2>To this point we have used quantiles to classify continous values in maps.<a class="headerlink" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps" title="Link to this heading">#</a></h2>
-</section>
-<section id="what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">
-<h2>What other common options do we have?  See the document of <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.plot.html">GeoDataFrame.plot</a> and <a class="reference external" href="https://github.com/pysal/mapclassify/tree/main">mapclassify</a><a class="headerlink" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify" title="Link to this heading">#</a></h2>
+<p><strong>To this point we have used quantiles to classify continous values in maps.</strong></p>
+<p><strong>What other common options do we have?  See the document of <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.plot.html">GeoDataFrame.plot</a> and <a class="reference external" href="https://github.com/pysal/mapclassify/tree/main">mapclassify</a></strong></p>
 <ol class="arabic simple">
 <li><p>Equal Intervals</p></li>
 </ol>
@@ -1099,7 +1087,6 @@ document.write(`
 </div>
 <p>Another way to show the figure: save it and import it to show in the presentation!
 <img alt="figure" src="../../../_images/asthma_three_class.png" /></p>
-</section>
 </section>
 <section id="adding-a-background">
 <h1>Adding a background<a class="headerlink" href="#adding-a-background" title="Link to this heading">#</a></h1>
@@ -1349,13 +1336,13 @@ Overall, ...
 </section>
 <section id="introduction-to-clustering">
 <h1>Introduction to clustering<a class="headerlink" href="#introduction-to-clustering" title="Link to this heading">#</a></h1>
-</section>
 <section id="what-is-clustering">
-<h1>What is clustering?<a class="headerlink" href="#what-is-clustering" title="Link to this heading">#</a></h1>
+<h2>What is clustering?<a class="headerlink" href="#what-is-clustering" title="Link to this heading">#</a></h2>
 <p>Clustering, generally, is the act of grouping similar things with eachother.</p>
 <p>We can do this with non-spatial data as well as spatial data.</p>
 <p>One common clustering method for non-spatial data is k-means, which we won’t cover in this class.</p>
 <p><img alt="K_means" src="https://images.squarespace-cdn.com/content/v1/5acbdd3a25bf024c12f4c8b4/1608407348392-22767PJ7RQ85BD5RLSLZ/k-means-clustering.png?format=2500w" /></p>
+</section>
 </section>
 <section id="why-do-we-want-to-identify-clusters">
 <h1>Why do we want to identify clusters?<a class="headerlink" href="#why-do-we-want-to-identify-clusters" title="Link to this heading">#</a></h1>
@@ -1382,42 +1369,38 @@ Overall, ...
 <li><p>how some attribute is expressed across space;</p></li>
 <li><p>whether similar attribute values are near each other.</p></li>
 </ul>
-<section id="if-we-want-to-do-spatial-clustering-of-a-variable-what-two-pieces-of-information-do-we-need-don-t-over-think">
-<h3>If we want to do ‘spatial clustering’ of a variable what two pieces of information do we need? (don’t over think!!!)<a class="headerlink" href="#if-we-want-to-do-spatial-clustering-of-a-variable-what-two-pieces-of-information-do-we-need-don-t-over-think" title="Link to this heading">#</a></h3>
-</section>
-</section>
+<p><strong>If we want to do ‘spatial clustering’ of a variable what two pieces of information do we need? (don’t over think!!!)</strong></p>
 </section>
 <section id="autocorrelation">
-<h1>Autocorrelation<a class="headerlink" href="#autocorrelation" title="Link to this heading">#</a></h1>
+<h2>Autocorrelation<a class="headerlink" href="#autocorrelation" title="Link to this heading">#</a></h2>
 <p>Autocorrelation literally means ‘self correlations’.</p>
 <p>So instead of looking at how two attributes relate to each other (e.g., regression), we want to explore one a single attribute relates to its neighbours.</p>
 <p>Typically, we’re talking about temporal autocorrelation or spatial autocorrelation.</p>
 </section>
 <section id="spatial-autocorrelation">
-<h1>Spatial Autocorrelation<a class="headerlink" href="#spatial-autocorrelation" title="Link to this heading">#</a></h1>
+<h2>Spatial Autocorrelation<a class="headerlink" href="#spatial-autocorrelation" title="Link to this heading">#</a></h2>
 <p>How does a variable value in a specific location correlate with the variable values in its neighbours?</p>
 <ul class="simple">
 <li><p>regress a value on the values of its neighbours!</p></li>
 </ul>
-<section id="so-again-information-do-we-need-to-do-answer-this-question">
-<h2>So again, information do we need to do answer this question?<a class="headerlink" href="#so-again-information-do-we-need-to-do-answer-this-question" title="Link to this heading">#</a></h2>
-</section>
+<p><strong>So again, information do we need to do answer this question?</strong></p>
 <section id="for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours">
-<h2>1) For each observation (in this case, neighborhood) we need to know their neighbours!<a class="headerlink" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours" title="Link to this heading">#</a></h2>
+<h3>1) For each observation (in this case, neighborhood) we need to know their neighbours!<a class="headerlink" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours" title="Link to this heading">#</a></h3>
 <p>To do this we can create something known as a ‘weights matrix’.</p>
 <p>A weights matrix is a matrix that describes whether or not any one observation is ‘neighbours’ with another.</p>
 <p>There are many ways we can do this, but let’s focus on two common ones: queens contiguity matrix and the rook contiguity matrix:</p>
 <p><img alt="weights matrices" src="../../../_images/spatial_matrix.jpg" /></p>
 </section>
 <section id="next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours">
-<h2>2) Next we need to describe the value of our attribute of interest in neighbours<a class="headerlink" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours" title="Link to this heading">#</a></h2>
+<h3>2) Next we need to describe the value of our attribute of interest in neighbours<a class="headerlink" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours" title="Link to this heading">#</a></h3>
 <p>To do this we create a variable known as ‘spatial lag’.</p>
 <p>Spatial lag for neighbourhood <em>i</em> is often just the average of some attribute value across all of neighbourhood <em>i</em>’s neighbours (as determined by our weights matrix!).</p>
 </section>
 <section id="finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours">
-<h2>3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.<a class="headerlink" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours" title="Link to this heading">#</a></h2>
+<h3>3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.<a class="headerlink" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours" title="Link to this heading">#</a></h3>
 <p>This set up allows us to see if neighbourhood’s with high attribute values are next to other neighbourhoods with high values.</p>
 <p>We can then use a number of statistical tests to determine if there are ‘significant’ clusters in our dataset.</p>
+</section>
 </section>
 <section id="we-will-talk-about-the-code-to-make-this-works-next-week">
 <h2>We will talk about the code to make this works next week.<a class="headerlink" href="#we-will-talk-about-the-code-to-make-this-works-next-week" title="Link to this heading">#</a></h2>
@@ -1504,11 +1487,7 @@ Overall, ...
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pop-quiz">POP QUIZ!!</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">To this point we have used quantiles to classify continous values in maps.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">What other common options do we have?  See the document of GeoDataFrame.plot and mapclassify</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-background">Adding a background</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-reproject-the-map-into-web-mercator-and-compare-to-the-original-projection">Let’s reproject the map into Web Mercator and compare to the original projection:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-add-the-web-basemap-we-can-do-the-following">To add the web basemap, we can do the following</a></li>
@@ -1522,21 +1501,19 @@ Overall, ...
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-we-interpretate-it-why-do-we-want-to-use-this-figure">How can we interpretate it? (Why do we want to use this figure?)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-clustering">Introduction to clustering</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-clustering">What is clustering?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-clustering">Introduction to clustering</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-clustering">What is clustering?</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-want-to-identify-clusters">Why do we want to identify clusters?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-clustering-at-a-high-level-is-doing-the-same-thing-but-one-attribute-to-consider-is-geography">Spatial clustering, at a high level, is doing the same thing but one attribute to consider is geography.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-want-to-do-spatial-clustering-of-a-variable-what-two-pieces-of-information-do-we-need-don-t-over-think">If we want to do ‘spatial clustering’ of a variable what two pieces of information do we need? (don’t over think!!!)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-clustering-at-a-high-level-is-doing-the-same-thing-but-one-attribute-to-consider-is-geography">Spatial clustering, at a high level, is doing the same thing but one attribute to consider is geography.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation">Autocorrelation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-autocorrelation">Spatial Autocorrelation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours">1) For each observation (in this case, neighborhood) we need to know their neighbours!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours">2) Next we need to describe the value of our attribute of interest in neighbours</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours">3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#autocorrelation">Autocorrelation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-autocorrelation">Spatial Autocorrelation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-again-information-do-we-need-to-do-answer-this-question">So again, information do we need to do answer this question?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-observation-in-this-case-neighborhood-we-need-to-know-their-neighbours">1) For each observation (in this case, neighborhood) we need to know their neighbours!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-we-need-to-describe-the-value-of-our-attribute-of-interest-in-neighbours">2) Next we need to describe the value of our attribute of interest in neighbours</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-now-we-can-see-how-a-neighbourhood-s-attribute-compares-to-its-neighbours">3) Finally, now we can see how a neighbourhood’s attribute compares to its neighbours.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-talk-about-the-code-to-make-this-works-next-week">We will talk about the code to make this works next week.</a></li>
 </ul>
 </li>
