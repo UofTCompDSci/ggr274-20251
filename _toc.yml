@@ -27,16 +27,21 @@ parts:
     - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
       title: Project Instruction
 
+  # - caption: Week 12
+  #   chapters:
+  #   - file: weekly-materials/week12/lecture/Class12_GGR274_CL.ipynb
+  #     title: Prof. Li's Notebook
+
   - caption: Week 11
     chapters:
     - file: weekly-materials/week11/lecture/Class11_GGR274_CL.ipynb
       title: Prof. Li's Notebook
     # - file: weekly-materials/week11/lecture/Class11_GGR274_CL_Output.ipynb
     #   title: Prof. Li's Notebook with outputs
-    # - file: weekly-materials/week11/lab/Lab_11.ipynb
-    #   title: Lab 11 Notebook
-    # - file: weekly-materials/week11/homework/Homework_11.ipynb
-    #   title: Homework 11 Notebook
+    - file: weekly-materials/week11/lab/Lab_11.ipynb
+      title: Lab 11 Notebook
+    - file: weekly-materials/week11/homework/Homework_11.ipynb
+      title: Homework 11 Notebook
 
   - caption: Week 10
     chapters:
