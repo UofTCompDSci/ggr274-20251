@@ -27,10 +27,12 @@ parts:
     - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
       title: Project Instruction
 
-  # - caption: Week 12
-  #   chapters:
-  #   - file: weekly-materials/week12/lecture/Class12_GGR274_CL.ipynb
-  #     title: Prof. Li's Notebook
+  - caption: Week 12
+    chapters:
+    - file: weekly-materials/week12/lecture/Class12_GGR274_CL.ipynb
+      title: Prof. Li's Notebook
+    - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.ipynb
+      title: Cluster Exercise
 
   - caption: Week 11
     chapters:
