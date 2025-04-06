@@ -19,7 +19,12 @@ parts:
       title: JupyterHub Guide
     - file: guides/markus_guide.ipynb
       title: MarkUs Guide
-      
+
+  - caption: Final practice
+    chapters:
+    - file: practice/final_exam_2022/ggr_final_answers_2022.ipynb
+      title: Final practice
+
   - caption: Project
     chapters:
     - file: project/proposal/GGR274_Project_Proposal.ipynb
