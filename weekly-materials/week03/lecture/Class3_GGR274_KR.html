@@ -1,0 +1,1724 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GGR274 Lecture 3: Introduction to Programming, Part 2 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lecture/Class3_GGR274_KR';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 Lecture 3: Introduction to Programming, Part 2" href="Class3_GGR274_KR_solutions.html" />
+    <link rel="prev" title="GGR274 Homework 4: Time Use Survey Data" href="../../week04/homework/Homework_4_solution.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2025
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/class/m5l5abtof4o78y/post/6">Piazza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final practice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/final_exam_2022/ggr_final_answers_2022.html">2025 Final Exam Practice</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../project/presentation/GGR274_Final_Project_Instruction.html">Project Instruction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week12/lecture/Class12_GGR274_CL.html">Class 12</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../week12/lecture/Exercise/Cluster_analysis_exercise.html">Cluster Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week12/lecture/Exercise/Cluster_analysis_solution.html">Cluster Exercise solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week11/lecture/Class11_GGR274_CL.html">Class 11</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lecture/Class10_GGR274_CL.html">Class 10</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../week10/lab/Lab_10.html">Lab 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week10/homework/Homework_10.html">Homework 10 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week09/lecture/Class9_GGR274_CL.html">Class 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../week09/lab/Lab_9.html">Lab 9 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week09/homework/Homework_9.html">Homework 9 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week08/lecture/Class8_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week08/lecture/Class8_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week08/lab/Lab_8.html">Lab 8 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week08/lab/marking/Lab_8_solution.html">Lab 8 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week08/homework/Homework_8.html">Homework 8 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week08/homework/marking/Homework_8_solution.html">Homework 8 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lecture/Class7_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=36409989">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lab/Lab_7.html">Lab 7 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lab/Lab_7_solutions.html">Lab 7 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/homework/Homework_7.html">Homework 7 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/homework/Homework_7_solution.html">Homework 7 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/sample_midterm/GGR274_Midterm.html">Midterm practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5.html">Lab 5 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5_solutions.html">Lab 5 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5.html">Homework 5 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5_solution.html">Homework 5 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files?preview=35904876">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM_solution.html">Prof. Moon's Notebook with Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 4 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4_solutions.html">Lab 4 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 4 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4_solution.html">Homework 4 Solution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Class3_GGR274_KR_solutions.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3.html">Lab 3 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3.html">Homework 3 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_KR_sol.html">Prof. Reid's Notebook with exercise solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 2 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 2 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/380232/files/?preview=35527981">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_KR.html">Prof. Reid's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20251&urlpath=tree/ggr274-20251/weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week03/lecture/Class3_GGR274_KR.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274 Lecture 3: Introduction to Programming, Part 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-tips">Jupyter Notebook Tips</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-pitfall-changing-variables-and-running-cells-out-of-order">Common pitfall: changing variables and running cells out of order</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement-terminology">If statement terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else"><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-break">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-terminology">For loop terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-print">Using loops: compute and print</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-save">Using loops: compute and save</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-filtering">Using loops: filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-data-from-files">Reading data from files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canada-s-electoral-districts">Running example: Canada’s Electoral Districts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-files">CSV files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-let-s-use-the-dictionary-to-compute-the-same-values-as-above">Now let’s use the dictionary to compute the same values as above</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-keys">Dictionary Keys</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-to-pandas">Bridge to <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-lists-to-data-frames">From lists to data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-pandas">Importing <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-creating-your-own-data-frame">Preview: Creating your own data frame</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-dictionary-of-your-data">Step 1: Create a dictionary of your data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-turn-the-dictionary-into-a-data-frame">Step 2: Turn the dictionary into a data frame</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lecture-3-introduction-to-programming-part-2">
+<h1>GGR274 Lecture 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lecture-3-introduction-to-programming-part-2" title="Link to this heading">#</a></h1>
+<section id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h2>
+<p>Last lecture, we learned about:</p>
+<ul>
+<li><p>Five basic Python <strong>data types</strong>:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Integers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">-3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Non-integer numbers</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10.3</span></code>, <code class="docutils literal notranslate"><span class="pre">-3.5</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p>True/False</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p>Text</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;January</span> <span class="pre">is</span> <span class="pre">cold&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p>A sequence of data</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[&quot;January&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;cold&quot;]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+<p>Last lecture, we learned about:</p>
+<ul class="simple">
+<li><p>Operations we can perform on different data types</p>
+<ul>
+<li><p>Arithmetic: <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>Comparison: <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></li>
+<li><p>Substring search: <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
+<li><p>Boolean (logic): <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></p></li>
+<li><p>Indexing: <code class="docutils literal notranslate"><span class="pre">my_string[i]</span></code>, <code class="docutils literal notranslate"><span class="pre">my_list[i]</span></code></p>
+<ul>
+<li><p><strong>Note</strong>: indexing starts at 0, not 1!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Last lecture, we learned about:</p>
+<ul class="simple">
+<li><p>Functions</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">len</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
+</ul>
+</li>
+<li><p>String methods</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">str.upper()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str.lower()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str.replace(old,</span> <span class="pre">new)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str.split()</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>In this lecture, you will learn to:</p>
+<ul class="simple">
+<li><p>“Reset” Python in your notebook</p></li>
+<li><p>Avoid a common pitfall involving changing variables</p></li>
+<li><p>Use <strong>if statements</strong> and <strong>for loops</strong> to control how Python code gets executed</p></li>
+<li><p>Read in data from <strong>files</strong></p></li>
+<li><p>Navigate through and find your course files on JupyterHub</p></li>
+</ul>
+</section>
+<section id="jupyter-notebook-tips">
+<h2>Jupyter Notebook Tips<a class="headerlink" href="#jupyter-notebook-tips" title="Link to this heading">#</a></h2>
+<p>If Python seems to be behaving strangely or you’ve run a bunch of cells and lost track of what you’re doing, don’t panic!</p>
+<p><strong>Reset</strong> Python your notebook by doing the following:</p>
+<ol class="arabic">
+<li><p>Go to <em>Kernel -&gt; Restart &amp; Clear Output</em>.</p></li>
+<li><p>Python will restart, and all cell outputs will be removed, leaving only your code.</p></li>
+<li><p>Then, select the cell you’re currently working on, and go to <em>Cell -&gt; Run All Above</em>.</p>
+<p>Or, if you want to re-run all cells, select <em>Cell -&gt; Run All</em> instead.</p>
+</li>
+</ol>
+<section id="common-pitfall-changing-variables-and-running-cells-out-of-order">
+<h3>Common pitfall: changing variables and running cells out of order<a class="headerlink" href="#common-pitfall-changing-variables-and-running-cells-out-of-order" title="Link to this heading">#</a></h3>
+<p>Demo!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_number</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_number</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_number</span> <span class="o">=</span> <span class="n">my_number</span> <span class="o">+</span> <span class="mi">100</span>
+
+<span class="n">my_number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Avoiding this pitfall</strong>:</p>
+<ol class="arabic simple">
+<li><p>Prefer making cells “self-contained”: define and use variables in the same cell.</p></li>
+<li><p>If you’re using a variable, make sure it’s been defined in an <em>earlier</em> cell.</p></li>
+<li><p>After defining a variable, avoid <em>changing</em> the variable’s value in a different cell. Treat the variable as “read-only” after the cell it’s been defined in.</p></li>
+</ol>
+</section>
+</section>
+<section id="if-statements">
+<h2>If statements<a class="headerlink" href="#if-statements" title="Link to this heading">#</a></h2>
+<p>So far, all of our code has been executed one line at a time, in top-down order:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Karen&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! How old are you?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Goodbye </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, nice to meet you. :)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sometimes, we want to run different code depending on the values of our variables.</p>
+<p>An <strong>if statement</strong> is a kind of Python code that lets us <em>only execute some code if a specific condition is met</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Karen&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! How old are you?&quot;</span><span class="p">)</span>
+
+<span class="c1"># NEW</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Goodbye </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, nice to meet you. :)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="if-statement-terminology">
+<h3>If statement terminology<a class="headerlink" href="#if-statement-terminology" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">statement2</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>We call the expression between the <code class="docutils literal notranslate"><span class="pre">if</span></code> and the colon the <strong>if condition</strong>.</p>
+<p>We call the statements indented on the line(s) after the colon the <strong>if branch</strong>.</p>
+<p><strong>Warning</strong>: indentation matters! Python uses indentation to determine what code is part of an if statement vs. what’s after the if statement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line 1&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>vs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line 1&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="if-elif-else">
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#if-elif-else" title="Link to this heading">#</a></h3>
+<p>We can use an optional <strong>else block</strong> after the if block to execute code only when the if condition is False.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Karen&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! How old are you?&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ah yes </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> is indeed a reasonable age to be teaching.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Goodbye </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, nice to meet you. :)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we can include zero or more <strong>elif blocks</strong> between the if and else to express more than two cases.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Karen&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! How old are you?&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you&#39;re already </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">==</span> <span class="mi">57</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ah </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are the perfect age and they should let you do whatever you want. 😎&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ah yes </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> is indeed a reasonable age to be teaching.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Goodbye </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, nice to meet you. :)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-break">
+<h2>Exercise Break<a class="headerlink" href="#exercise-break" title="Link to this heading">#</a></h2>
+<p>When is a year a leap year?  A leap year is a year that has 366 days by adding February 29 to the calendar.  Leap years occur on years that are evenly divisible by 4, except years that are evenly divisible by 100 but not by 400.</p>
+<p>Write conditional statements so that the statement <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is a leap year and <code class="docutils literal notranslate"><span class="pre">f&quot;{year}</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">a</span> <span class="pre">leap</span> <span class="pre">year&quot;</span></code> will be printed if <code class="docutils literal notranslate"><span class="pre">year</span></code> is not a leap year.</p>
+<p>This question uses the modulus operator, <code class="docutils literal notranslate"><span class="pre">%</span></code>, which finds the integer remainder of the division between two integers.  For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">4</span> <span class="pre">==</span> <span class="pre">0</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is evenly divisible by 4.  In other words <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">4</span> <span class="pre">==</span> <span class="pre">0</span></code> is true if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">4</span></code> has no remainder.</p>
+<p>Test your statements on the following years:</p>
+<ul class="simple">
+<li><p>2025 is not a leap year</p></li>
+<li><p>2024 is a leap year</p></li>
+<li><p>2000 is a leap year</p></li>
+<li><p>2100 is not a leap year</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2024</span> 
+
+<span class="c1"># write your code here   </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="for-loops">
+<h2>For loops<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h2>
+<p>Recall that we can represent and operate on a collection of data using the <code class="docutils literal notranslate"><span class="pre">list</span></code> data type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sometimes we want to execute a piece of code <em>once per element in a collection</em>.</p>
+<p>We can do this using a <strong>for loop</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="for-loop-terminology">
+<h3>For loop terminology<a class="headerlink" href="#for-loop-terminology" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">variable</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">collection</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">statement2</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We call <code class="docutils literal notranslate"><span class="pre">&lt;variable&gt;</span></code> the <strong>(for) loop variable</strong>. It refers to each element of the <code class="docutils literal notranslate"><span class="pre">&lt;collection&gt;</span></code>, one at a time.</p></li>
+<li><p>We say that the for loop <strong>iterates over</strong> the <code class="docutils literal notranslate"><span class="pre">&lt;collection&gt;</span></code>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>We call the statements indented after the colon the <strong>(for) loop body</strong>.</p></li>
+<li><p>We call each repetition of the loop body an <strong>iteration</strong> of the loop.</p></li>
+</ul>
+</section>
+<section id="using-loops-compute-and-print">
+<h3>Using loops: compute and print<a class="headerlink" href="#using-loops-compute-and-print" title="Link to this heading">#</a></h3>
+<p><em>Problem</em>: Given a list of names, compute the length of each name and display each result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length of &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; is </span><span class="si">{</span><span class="n">name_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-loops-compute-and-save">
+<h3>Using loops: compute and save<a class="headerlink" href="#using-loops-compute-and-save" title="Link to this heading">#</a></h3>
+<p><em>Problem</em>: Given a list of names, compute the length of each name and <em>store</em> each result (so that we can use these values later).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="c1"># How do we &quot;save&quot; the length of the name?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To accomplish this, we will:</p>
+<ol class="arabic simple">
+<li><p>Create a new list variable to store the results.</p></li>
+<li><p>In the loop body, use the (new!) <code class="docutils literal notranslate"><span class="pre">list.append</span></code> method to add each length to the new list.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_length</span><span class="p">)</span>
+    
+<span class="n">lengths</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-loops-filtering">
+<h3>Using loops: filtering<a class="headerlink" href="#using-loops-filtering" title="Link to this heading">#</a></h3>
+<p>We can combine a <strong>for loop</strong> and an <strong>if statement</strong> to iterate over a collection, decide what to do based on whether the current value satisifies a condition.</p>
+<p><em>Problem</em>: Given a list of names, compute the length of each name <strong>that contains an <code class="docutils literal notranslate"><span class="pre">&quot;e&quot;</span></code></strong>, and store each result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;e&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+        <span class="n">name_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_length</span><span class="p">)</span>
+    
+<span class="n">lengths</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 12]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>Exercise Break<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Given a list of names, compute the length of each name that contains an <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> <em>and</em> a <code class="docutils literal notranslate"><span class="pre">&quot;c&quot;</span></code>, and store each result.</p></li>
+<li><p>Given a list of names, compute the length of each name and store each result <em>that is <span class="math notranslate nohighlight">\(\geq 11\)</span></em>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">]</span>
+
+<span class="c1"># Write your code for Question 1 here.</span>
+
+
+<span class="c1"># Write your code for Question 2 here.</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-data-from-files">
+<h2>Reading data from files<a class="headerlink" href="#reading-data-from-files" title="Link to this heading">#</a></h2>
+<p>So far, we’ve been working entirely with data we defined inside our notebook.</p>
+<p>But in practice, we’ll be reading in large quantities of data from files.
+Let’s learn how to do this in JupyterHub and Python!</p>
+<section id="running-example-canada-s-electoral-districts">
+<h3>Running example: Canada’s Electoral Districts<a class="headerlink" href="#running-example-canada-s-electoral-districts" title="Link to this heading">#</a></h3>
+<p>Today we’ll work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;amp;dir=cir/list&amp;amp;document=index338&amp;amp;lang=e#list">Elections Canada</a>.</p>
+<p>We’ve downloaded this data in a file called <code class="docutils literal notranslate"><span class="pre">ED-Canada_2016.csv</span></code> and added it to course website in the same folder as this notebook.</p>
+<p>Let’s take a look now. The easiest way to get to the file is to go to <strong>File -&gt; Open…</strong> in the menu. Demo time!</p>
+</section>
+</section>
+<section id="csv-files">
+<h2>CSV files<a class="headerlink" href="#csv-files" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ED-Canada_2016.csv</span></code> is a type of file called a <strong>comma-separated values (CSV)</strong> file, which is a common way of storing tabular data.</p>
+<p>In a CSV file:</p>
+<ul class="simple">
+<li><p>Each <em>line</em> of the file represents one row</p></li>
+<li><p>Within one line, each column entry is separated by a <em>comma</em></p></li>
+</ul>
+<section id="reading-file-data-open-and-readlines">
+<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Link to this heading">#</a></h3>
+<p>Now that we’ve seen the file, let’s learn how to read the file’s contents into Python.</p>
+<p>Formally, we do this in two steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Open</strong> the file.</p></li>
+<li><p><strong>Read</strong> the file data into Python, line by line.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1</span>
+<span class="n">district_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ED-Canada_2016.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+<span class="n">district_file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">district_data</span> <span class="o">=</span> <span class="n">district_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="n">district_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-processing">
+<h3>Data processing<a class="headerlink" href="#data-processing" title="Link to this heading">#</a></h3>
+<p>Let’s look at just the first line from the file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">district_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There’s two annoying parts about this line:</p>
+<ol class="arabic simple">
+<li><p>It’s a single string, but really stores two pieces of data.</p></li>
+<li><p>There’s a strange <code class="docutils literal notranslate"><span class="pre">\n</span></code> at the end of the string, representing a <em>line break</em>.</p></li>
+</ol>
+<p><strong>Goal</strong>: take the list <code class="docutils literal notranslate"><span class="pre">district_data</span></code> and extract just the population counts, converting to <code class="docutils literal notranslate"><span class="pre">int</span></code>. We’ll develop this one together!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">district_data</span><span class="p">:</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    
+    <span class="n">population_entry</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    
+    <span class="n">population_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">population_entry</span><span class="p">)</span>
+    
+    <span class="n">populations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">population_int</span><span class="p">)</span>
+    
+<span class="n">populations</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[86494,
+ 74116,
+ 77680,
+ 27197,
+ 86553,
+ 85697,
+ 81979,
+ 36615,
+ 36094,
+ 34168,
+ 36030,
+ 71913,
+ 71962,
+ 80590,
+ 92301,
+ 94610,
+ 96255,
+ 83465,
+ 86498,
+ 91830,
+ 72148,
+ 82026,
+ 77791,
+ 82292,
+ 83303,
+ 79943,
+ 60378,
+ 57405,
+ 92666,
+ 65287,
+ 79363,
+ 68673,
+ 87787,
+ 103491,
+ 117447,
+ 101373,
+ 95781,
+ 71897,
+ 108746,
+ 96029,
+ 94588,
+ 114966,
+ 117343,
+ 100371,
+ 101840,
+ 99787,
+ 101032,
+ 103457,
+ 107582,
+ 84918,
+ 107254,
+ 93674,
+ 97887,
+ 81639,
+ 105459,
+ 112866,
+ 103397,
+ 75850,
+ 107464,
+ 106496,
+ 103592,
+ 105419,
+ 104136,
+ 89818,
+ 106336,
+ 105496,
+ 104911,
+ 108579,
+ 106766,
+ 113815,
+ 111835,
+ 108003,
+ 106583,
+ 113528,
+ 108703,
+ 103346,
+ 117238,
+ 92518,
+ 87233,
+ 117652,
+ 97811,
+ 107981,
+ 95527,
+ 103320,
+ 104974,
+ 102088,
+ 110750,
+ 108587,
+ 115531,
+ 115313,
+ 97143,
+ 116066,
+ 107242,
+ 102346,
+ 112156,
+ 110677,
+ 101750,
+ 102693,
+ 111190,
+ 98828,
+ 113212,
+ 110264,
+ 112826,
+ 111139,
+ 111176,
+ 119227,
+ 111575,
+ 110515,
+ 114659,
+ 111867,
+ 119677,
+ 79483,
+ 115227,
+ 109286,
+ 100788,
+ 109735,
+ 109468,
+ 102270,
+ 122000,
+ 118180,
+ 121188,
+ 130000,
+ 130296,
+ 107679,
+ 123180,
+ 115463,
+ 109619,
+ 108473,
+ 94579,
+ 110076,
+ 102508,
+ 128237,
+ 130872,
+ 114395,
+ 115052,
+ 125442,
+ 118022,
+ 129081,
+ 118040,
+ 111065,
+ 109975,
+ 131794,
+ 109652,
+ 113956,
+ 100103,
+ 107848,
+ 104877,
+ 113024,
+ 94333,
+ 106570,
+ 110960,
+ 62556,
+ 131995,
+ 117543,
+ 105258,
+ 100709,
+ 105309,
+ 105331,
+ 101630,
+ 100546,
+ 119467,
+ 125362,
+ 126110,
+ 126064,
+ 99078,
+ 123318,
+ 114093,
+ 124849,
+ 120205,
+ 122560,
+ 117444,
+ 118240,
+ 118301,
+ 119110,
+ 117418,
+ 109067,
+ 136292,
+ 90838,
+ 93772,
+ 88813,
+ 112412,
+ 120923,
+ 129078,
+ 126764,
+ 118038,
+ 128281,
+ 121058,
+ 111508,
+ 111837,
+ 113790,
+ 108805,
+ 94398,
+ 107908,
+ 118176,
+ 112947,
+ 103495,
+ 110177,
+ 102918,
+ 111691,
+ 107900,
+ 105337,
+ 80371,
+ 105542,
+ 112603,
+ 102386,
+ 98800,
+ 102275,
+ 110278,
+ 129944,
+ 111332,
+ 115506,
+ 103320,
+ 91532,
+ 112719,
+ 82805,
+ 82651,
+ 83257,
+ 103805,
+ 106875,
+ 104311,
+ 105228,
+ 110134,
+ 120981,
+ 128377,
+ 118801,
+ 117429,
+ 122988,
+ 104319,
+ 104010,
+ 116686,
+ 108037,
+ 88170,
+ 82574,
+ 87027,
+ 87527,
+ 92738,
+ 84077,
+ 97354,
+ 99946,
+ 89818,
+ 94778,
+ 85949,
+ 95676,
+ 99678,
+ 93053,
+ 73506,
+ 68353,
+ 70891,
+ 80662,
+ 79733,
+ 79625,
+ 92426,
+ 76017,
+ 84153,
+ 82946,
+ 82663,
+ 83711,
+ 72635,
+ 71031,
+ 135762,
+ 110223,
+ 115022,
+ 119176,
+ 122023,
+ 111830,
+ 112087,
+ 121844,
+ 115795,
+ 131823,
+ 147520,
+ 121392,
+ 135730,
+ 109941,
+ 112287,
+ 121048,
+ 118561,
+ 120863,
+ 106066,
+ 121869,
+ 158749,
+ 113227,
+ 110230,
+ 117327,
+ 108451,
+ 117394,
+ 106896,
+ 109965,
+ 119019,
+ 128786,
+ 121313,
+ 122193,
+ 120784,
+ 101979,
+ 101814,
+ 102486,
+ 111973,
+ 108907,
+ 110293,
+ 100126,
+ 117640,
+ 123576,
+ 114647,
+ 108052,
+ 103064,
+ 116958,
+ 124358,
+ 119388,
+ 112354,
+ 117017,
+ 94825,
+ 122710,
+ 115340,
+ 124605,
+ 115344,
+ 101101,
+ 110817,
+ 110995,
+ 98396,
+ 120834,
+ 107339,
+ 88920,
+ 114695,
+ 104051,
+ 99913,
+ 120172,
+ 114605,
+ 116443,
+ 115724,
+ 103456,
+ 105466,
+ 104870,
+ 105608,
+ 102927,
+ 117133,
+ 119113,
+ 35874,
+ 41786,
+ 35944]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-we-can-compute">
+<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_populations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+<span class="n">total_population</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+<span class="n">max_population</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+<span class="n">min_population</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+<span class="n">avg_population</span> <span class="o">=</span> <span class="n">total_population</span> <span class="o">/</span> <span class="n">num_populations</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of population entries: </span><span class="si">{</span><span class="n">num_populations</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of populations: </span><span class="si">{</span><span class="n">total_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum district population: </span><span class="si">{</span><span class="n">max_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum district population: </span><span class="si">{</span><span class="n">min_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average district population: </span><span class="si">{</span><span class="n">avg_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of population entries: 338.
+Sum of populations: 35151728.
+Maximum district population: 158749.
+Minimum district population: 27197.
+Average district population: 103999.19526627219.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h2>
+<p>It’s kind of worrying to have just a list of numbers without any label for what the numbers mean. There is a Python data structure that is more useful for associating labels with values called a dictionary. As you will see it is similar to a list, but instead of a sequential index to access values, we think of a dictionary as containing <em>key</em> <em>value</em> pairs.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">district_data</span></code> lines that we read from <code class="docutils literal notranslate"><span class="pre">ED-Canada_2016.csv</span></code>, let’s see how we can build a dictionary with this data instead of a list of populations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an empty dictionary</span>
+<span class="n">district_populations_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">district_data</span><span class="p">:</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    
+    <span class="n">district_name</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">population_entry</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">population_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">population_entry</span><span class="p">)</span>
+    
+    <span class="n">district_populations_dict</span><span class="p">[</span><span class="n">district_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">district_populations_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="now-let-s-use-the-dictionary-to-compute-the-same-values-as-above">
+<h3>Now let’s use the dictionary to compute the same values as above<a class="headerlink" href="#now-let-s-use-the-dictionary-to-compute-the-same-values-as-above" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># These are not great variable names, but I wante to create new names rather</span>
+<span class="c1"># than repeat the ones from above to avoid confusion.</span>
+<span class="n">num_districts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">district_populations_dict</span><span class="p">)</span>
+<span class="n">total_population_dict</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">district_populations_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">max_population_dict</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">district_populations_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">min_population_dict</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">district_populations_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">avg_population_dict</span> <span class="o">=</span> <span class="n">total_population_dict</span> <span class="o">/</span> <span class="n">num_districts</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of population entries: </span><span class="si">{</span><span class="n">num_districts</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of populations: </span><span class="si">{</span><span class="n">total_population_dict</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum district population: </span><span class="si">{</span><span class="n">max_population_dict</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum district population: </span><span class="si">{</span><span class="n">min_population_dict</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average district population: </span><span class="si">{</span><span class="n">avg_population_dict</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dictionary-keys">
+<h3>Dictionary Keys<a class="headerlink" href="#dictionary-keys" title="Link to this heading">#</a></h3>
+<p>We can also loop over dictionary elements.  In the example below, the variable district will get the value of another key in the dictionary each iteration of the loop.  We could also have used <code class="docutils literal notranslate"><span class="pre">district_populations_dict.keys()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">district_populations_dict</span></code> to get the list of keys.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">district</span> <span class="ow">in</span> <span class="n">district_populations_dict</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">district</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>Exercise Break<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Let’s put some of this together.  Print the following message for each district that has <code class="docutils literal notranslate"><span class="pre">Toronto</span></code> in its name.  Use <code class="docutils literal notranslate"><span class="pre">district_populations_dict</span></code> that was defined above.
+<code class="docutils literal notranslate"><span class="pre">f&quot;{name}</span> <span class="pre">has</span> <span class="pre">population</span> <span class="pre">{district_populations[name]}</span></code></p>
+<p>In English what we want to do is check each dictionary key to see if the string <code class="docutils literal notranslate"><span class="pre">Toronto</span></code> is in the key. If it is, then we will print the message.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bridge-to-pandas">
+<h2>Bridge to <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#bridge-to-pandas" title="Link to this heading">#</a></h2>
+<section id="from-lists-to-data-frames">
+<h3>From lists to data frames<a class="headerlink" href="#from-lists-to-data-frames" title="Link to this heading">#</a></h3>
+<p>Python lists are very good at storing <em>one-dimensional data</em> (one “column” of data).</p>
+<p>But in practice, we don’t just want to store or compute on one column—we want to compute on an entire table, containing multiple columns!</p>
+<p>While it is possible to do this in Python lists, it’s more cumbersome to do so. It’s also possible to do this with Python dictionaries, but we’d have to do all the work.</p>
+<p>So in practice, we use a new data type called <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, which is used to store (two-dimensional) tabular data.</p>
+</section>
+<section id="importing-pandas">
+<h3>Importing <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#importing-pandas" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> type doesn’t come with base Python, but instead as part of the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library for doing data science in Python.</p>
+<p>To use a library in Python, we need to <strong>import</strong> it into our code.</p>
+<p>You are going to start to see a lot of conventions. For example, you will almost always see pandas imported as below. There is nothing magical about <code class="docutils literal notranslate"><span class="pre">pd</span></code>, but when we all use it as a short-hand for <code class="docutils literal notranslate"><span class="pre">pandas</span></code> it is easy to remember what it means.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This line of code loads the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library, calling it <code class="docutils literal notranslate"><span class="pre">pd</span></code>.</p>
+<p>Now we can use the <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code> function to read in this data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">district_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;ED-Canada_2016.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">district_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="preview-creating-your-own-data-frame">
+<h2>Preview: Creating your own data frame<a class="headerlink" href="#preview-creating-your-own-data-frame" title="Link to this heading">#</a></h2>
+<p>Next lecture, you’ll work with data frames in earnest.
+Some of the examples you’ll look at will involve creating small data frames “by hand”, since they’re easier to conceptualize than large data frames.</p>
+<p>Creating a data frame manually consists of two steps.</p>
+<section id="step-1-create-a-dictionary-of-your-data">
+<h3>Step 1: Create a dictionary of your data<a class="headerlink" href="#step-1-create-a-dictionary-of-your-data" title="Link to this heading">#</a></h3>
+<p>A <strong>dictionary</strong> is another type of Python collection that lets you created associated pairs of data.
+For us, a dictionary can map <em>column names</em> (strings) to <em>column values</em> (lists) in a table.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">my_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-turn-the-dictionary-into-a-data-frame">
+<h3>Step 2: Turn the dictionary into a data frame<a class="headerlink" href="#step-2-turn-the-dictionary-into-a-data-frame" title="Link to this heading">#</a></h3>
+<p>Now, we can turn that dictionary into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_data_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+
+<span class="n">my_data_frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Of course, if we wanted to we could combine the two steps into one larger statement. That’s more convenient, but a bit less explicit about what’s going on. Make sure you understand the previous two steps separately, and then study how they’re combined below!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_data_frame2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Karen Reid&quot;</span><span class="p">,</span> <span class="s2">&quot;Chunjiang Li&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael Moon&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">my_data_frame2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week03/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../week04/homework/Homework_4_solution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Homework 4: Time Use Survey Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Class3_GGR274_KR_solutions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 Lecture 3: Introduction to Programming, Part 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-tips">Jupyter Notebook Tips</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-pitfall-changing-variables-and-running-cells-out-of-order">Common pitfall: changing variables and running cells out of order</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement-terminology">If statement terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else"><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-break">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-terminology">For loop terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-print">Using loops: compute and print</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-save">Using loops: compute and save</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-filtering">Using loops: filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-data-from-files">Reading data from files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canada-s-electoral-districts">Running example: Canada’s Electoral Districts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-files">CSV files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-let-s-use-the-dictionary-to-compute-the-same-values-as-above">Now let’s use the dictionary to compute the same values as above</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-keys">Dictionary Keys</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise Break</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-to-pandas">Bridge to <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-lists-to-data-frames">From lists to data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-pandas">Importing <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-creating-your-own-data-frame">Preview: Creating your own data frame</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-dictionary-of-your-data">Step 1: Create a dictionary of your data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-turn-the-dictionary-into-a-data-frame">Step 2: Turn the dictionary into a data frame</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
