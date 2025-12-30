@@ -27,7 +27,7 @@ parts:
     - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
     - file: weekly-materials/week01/lecture/Class1_GGR274_KR.ipynb
-      title: Prof. Reid's Notebook
+      title: Prof. Reid's Notebook TESTING
     - file: weekly-materials/week01/lab/Lab_1.ipynb
       title: Lab 01 Notebook
     - file: weekly-materials/week01/homework/Homework_1.ipynb
